@@ -1,3 +1,13 @@
 
+<h1>**************<%=@team.name%>*****************</h1><br><br>
+
+<label><h2>Team Motto: <%=@team.motto%>!</h2></label><br><br>
 
 
+<% @new_member.each do |member|%>
+  <h3>Hero Name: <%=member.name%></h3>
+
+  <h3>Hero power: <%=member.power%></h3>
+  <h3>Hero biography: <%=member.bio%></h3><br>
+  <p>----------------------------------------</p>
+  <% end %>
