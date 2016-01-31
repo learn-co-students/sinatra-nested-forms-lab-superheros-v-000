@@ -1,3 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Team</title>
+</head>
+<body>
 
+<h1><%=@super_hash["name"]%></h1>
+<h2>Team Motto: <%=@super_hash["motto"]%></h2>
+
+<p>
+
+Hero Name: <%=@super_hash["members"][0]["name"]%>
+Hero power: <%=@super_hash["members"][0]["power"]%>
+Hero biography: <%=@super_hash["members"][0]["bio"]%>
+  
+Hero Name: <%=@super_hash["members"][1]["name"]%>
+Hero power: <%=@super_hash["members"][1]["power"]%>
+Hero biography: <%=@super_hash["members"][1]["bio"]%>
+
+Hero Name: <%=@super_hash["members"][2]["name"]%>
+Hero power: <%=@super_hash["members"][2]["power"]%>
+Hero biography: <%=@super_hash["members"][2]["bio"]%>
+
+</p>
+
+
+</body>
+</html>
 
 
