@@ -1,0 +1,37 @@
+<html>
+<head>
+  <title>Super Team Application Form</title>
+</head>
+<body>
+
+  <h1>Create a Team and Heroes!</h1>
+  <form method="POST" action="/teams">
+    <label for="team[name]">Team Name: </label>
+    <input name="team[name]" type="text">
+
+    <label for="team[motto]">Team Motto: </label>
+    <input name="team[motto]" type="text">
+
+
+    <% 5.times do |i| %>
+
+      <h1>Hero <%= (i+1).to_s %></h1>
+      <br>
+
+      <label for="team[members][][name]">Hero's Name: </label>
+      <input name="team[members][][name]" id="member<%= (i+1).to_s %>_name" type="text">
+
+      <label for="team[members][][power]">Hero's Power: </label>
+      <input name="team[members][][power]" id="member<%= (i+1).to_s %>_power" type="text">
+
+      <label for="team[members][][bio]">Hero's Biography: </label>
+      <input name="team[members][][bio]" id="member<%= (i+1).to_s %>_bio" type="text">
+      <br>
+
+    <% end %>
+
+    <input type="submit" value="submit">
+  </form>
+
+</body>
+</html>
