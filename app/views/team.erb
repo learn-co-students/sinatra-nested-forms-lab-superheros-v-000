@@ -1,10 +1,16 @@
-<h3> <%= @team.name %> </h3>
-<h3> Team Motto: <%= @team.motto %> </h3>
+<h3> <%= @team[:name] %> </h3>
+<h3> Team Motto: <%= @team[:motto] %> </h3>
 
-<% @members.each do |hero| %>
-  <p>Hero's Name: <%= hero.name %> </p>
-  <p>Hero's Power: <%= hero.power %> </p>
-  <p>Hero's Biography: <%= hero.bio %> </p>
-<%end%>
+<h3>Hero Name: <%= @team[:team][:members][0][:name] %></h3>
+ <p>Hero power: <%= @team[:team][:members][0][:power] %></p>
+ <p>Hero biography: <%= @team[:team][:members][0][:bio] %></p>
+ 
+ <h3>Hero Name: <%= @team[:team][:members][1][:name] %></h3>
+ <p>Hero power: <%= @team[:team][:members][1][:power] %></p>
+ <p>Hero biography: <%= @team[:team][:members][1][:bio] %></p>
+ 
+ <h3>Hero Name: <%= @team[:team][:members][2][:name] %></h3>
+ <p>Hero power: <%= @team[:team][:members][2][:power] %></p>
+ <p>Hero biography: <%= @team[:team][:members][2][:bio] %></p>
 
 

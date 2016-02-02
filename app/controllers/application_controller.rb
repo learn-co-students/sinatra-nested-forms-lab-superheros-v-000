@@ -1,6 +1,4 @@
 require 'sinatra/base'
-require_relative "../models/member"
-require_relative "../models/team"
 
 class App < Sinatra::Base
 
@@ -11,9 +9,8 @@ class App < Sinatra::Base
     end
 
     post '/teams' do
-      @team = params[:team]
-
-    erb :team
+      @team = params
+      erb :team 
 
     end
 

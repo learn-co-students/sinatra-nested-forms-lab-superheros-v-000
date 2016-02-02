@@ -1,18 +1,18 @@
-class Members
+class Member
 
   attr_accessor :name, :power, :bio
 
-  HEROES = []
+  MEMBERS = []
 
-  def initialize(name, power, bio)
+  def initialize(params)
     @name = params[:name]
     @power = params[:power]
     @bio = params[:bio]
-    HEROES << self
+    MEMBERS << self
   end
 
   def self.all
-    HEROES
+    MEMBERS
   end
 
 
