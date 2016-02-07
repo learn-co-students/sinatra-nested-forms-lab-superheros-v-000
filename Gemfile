@@ -14,4 +14,5 @@ group :test do
   gem 'rspec', '3.3.0'
   gem 'capybara', '2.5.0'
   gem 'rack-test', '>= 0.5.4'
+  gem 'learn-co'
 end
