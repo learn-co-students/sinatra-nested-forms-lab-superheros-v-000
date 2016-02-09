@@ -1,17 +1,17 @@
+<div class="team">
+  
+  <h1><%=@team.name %></h1>
+  <h2>Team Motto: <%= @team.motto %></h2>
 
-<h1><%= @team.name%></h1>
-  <div class="team">
-  <h2>Motto: <%= @team.motto %></h2>
+</div><br>
+
+<div class="members">
+<% @members.each do |mem| %>
+  
+    <h2>Hero Name: <%= mem.name %></h2><br>
+    <h4>Hero power: <%= mem.power %></h4><br>
+    <h4>Hero biography: <%= mem.bio %></h4><br>
 
   </div><br>
-
-
-<% =@members.each do |member| %>
-  <div class="member">
-    <h2>Hero Name: <%= member.name %></h2><br>
-    <h4>Hero Power: <%= member.power %></h4><br>
-    <h4>Hero Biography: <%= member.bio %></h4><br>
-
-  </div><br>
-<%=end %>
+<% end %>
 

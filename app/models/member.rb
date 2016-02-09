@@ -1,16 +1,16 @@
 class Member
   attr_accessor :name, :power, :bio
 
-  @@all = []
+  MEMBERS = []
 
   def initialize(params)
-    params.each do |k,v|
-      self.send("#{k}=", v)
-    end
-    @@all << self
+    @name = params[:name]
+    @power = params[:power]
+    @bio = params[:bio]
+    MEMBERS << self
   end
 
   def self.all
-    @@all
+    MEMBERS
   end
 end

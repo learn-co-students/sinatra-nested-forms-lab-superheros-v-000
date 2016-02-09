@@ -1,9 +1,10 @@
 require 'sinatra/base'
-
+require_relative '../models/team.rb'
+require_relative '../models/member.rb'
 class App < Sinatra::Base
 
     set :views, Proc.new { File.join(root, "../views/") }
-    
+
     get '/' do 
       erb :super_hero
     end
@@ -16,7 +17,7 @@ class App < Sinatra::Base
       end
 
       @members = Member.all
-      erb :teams
+      erb :team
     end
 
 end
