@@ -7,7 +7,6 @@ class Hero
     self.name = args[:name]
     self.power = args[:power]
     self.bio = args[:bio]
-    self.assign_team(args[:team])
     HEROES << self
   end
   
