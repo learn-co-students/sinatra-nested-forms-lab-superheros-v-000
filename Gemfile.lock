@@ -68,6 +68,3 @@ DEPENDENCIES
   shotgun (= 0.9)
   sinatra (= 1.4.3)
   thin (= 1.6.4)
-
-BUNDLED WITH
-   1.10.6
