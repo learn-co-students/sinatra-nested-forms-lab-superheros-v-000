@@ -1,3 +1,23 @@
+<!DOCTYPE <html>
+<head>
+  <title>Superheroes</title>
+</head>
+<body>
 
+  <h1><%= @team.name %></h1>
+  <h3>Team Motto: <%= @team.motto %></h3>
+  
+  <% SuperHero.all.each{|sh|%>
+  <h2><%= "Hero Name: #{sh.name}" %></h2>
+  <p><%= "Hero power: #{sh.power}" %></p>
+  <p><%= "Hero biography: #{sh.bio}" %></p>
+  <br>
+  <% }%>
+
+
+
+
+</body>
+</html>
 
 
