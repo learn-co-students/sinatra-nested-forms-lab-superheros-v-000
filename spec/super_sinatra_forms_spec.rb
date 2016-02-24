@@ -18,6 +18,7 @@ describe App do
   describe 'POST /teams' do
     it 'submits the form' do
       visit '/'
+     
       fill_in("team[name]", :with => "Team Ruby")
       fill_in("team[motto]", :with => "We love Ruby!")
       fill_in("member1_name", :with => "Amanda")
@@ -30,7 +31,7 @@ describe App do
       fill_in("member3_power", :with => "Sinatra")
       fill_in("member3_bio", :with => "I love Sinatra!")
       click_button 'submit'
-
+      #puts page.body
       expect(page).to have_text("Team Ruby")
       expect(page).to have_text("Team Motto: We love Ruby!")
       expect(page).to have_text("Hero Name: Amanda")
