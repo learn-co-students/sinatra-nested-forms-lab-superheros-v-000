@@ -1,13 +1,12 @@
 class Team
-
   attr_accessor :name, :motto
 
   @@all = []
 
-  def initialize(args)
-    @name = team[:name]
-    @motto = team[:motto]
-    @@all < self
+  def initialize(params)
+    @name = params[:name]
+    @motto = params[:motto]
+    @@all << self
   end
 
   def self.all 
