@@ -1,3 +1,13 @@
+<h1>The Super Duper Team!</h1>
 
+<h2>Team Name: <%= @team_name %></h2>
+<h2>Team Motto: <%= @team_motto %></h2>
+
+
+<% @team_members.each do |team| %>
+	<h2>Hero Name: <%= team[:name] %></h2>
+	<p>Hero power: <%= team[:power] %></p>
+	<p>Hero biography: <%= team[:bio] %></p>
+	<% end %>
 
 
