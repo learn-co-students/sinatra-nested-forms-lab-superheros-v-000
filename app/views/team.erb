@@ -1,3 +1,14 @@
+<h1>ONWARD!</h1>
 
+<!-- <p><%= params %></p> -->
 
+<p>Team Name: <%= params[:team][:name] %></p>
+<p>Team Motto: <%= params[:team][:motto] %></p>
+<br>
 
+<% params[:team][:members].each_with_index do |hero, i| %>
+  <h2>Hero <%= i+1 %></h2>
+  <p>Hero Name: <%= hero[:name] %></p>
+  <p>Hero power: <%= hero[:power] %></p>
+  <p>Hero biography: <%= hero[:bio] %></p>
+<% end %>
