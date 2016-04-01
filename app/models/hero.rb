@@ -7,6 +7,9 @@ class Hero
     @power = params[:power]
     @biography = params[:biography]
 
+    # can also do:
+    # params.each {|k, v| self.send(("#{k}="),v)}
+
     HEROES << self
   end
 
