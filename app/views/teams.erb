@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Team Display</title>
+</head>
+  <body>
+    <div class="team">
+      <h1>Team Name: <%= @team.name %></h1> 
+      <h2>Team Motto: <%= @team.motto %></h2><br>
+    </div>
+
+    <div class="hero1">
+      <% @members[0].tap do |member| %>
+      <h3>Hero Name: <%= member.name %></h3>
+      <h4>Hero power: <%= member.power %></h4>
+      <h4>Hero biography: <%= member.bio %></h4><br>
+      <% end %>
+    </div>
+
+    <div class="hero2">
+      <% @members[1].tap do |member| %>
+      <h3>Hero Name: <%= member.name %></h3>
+      <h4>Hero power: <%= member.power %></h4>
+      <h4>Hero biography: <%= member.bio %></h4><br>
+      <% end %>
+    </div>
+
+    <div class="hero3">
+      <% @members[2].tap do |member| %>
+      <h3>Hero Name: <%= member.name %></h3>
+      <h4>Hero power: <%= member.power %></h4>
+      <h4>Hero biography: <%= member.bio %></h4>
+      <% end %>
+    </div>
+  </body>
+</html>
+
+
