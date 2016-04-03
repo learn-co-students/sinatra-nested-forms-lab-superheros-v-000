@@ -1,15 +1,11 @@
-<h1><%= @team.name%></h1>
+<h1><%=@team.name %></h1>
 
+<h2><%=@motto_param + @team.motto %></h2>
 
-<h2>Team Motto: <%=@team.motto %></h2>
+<% @team_members.map do |hero|%>
 
-<h2>Hero Name: <%=@hero.name %></h2>
+<%= @name_param + hero.name %>
+<%= @power_param + hero.power%>
+<%= @bio_param + hero.bio%>
 
-<p>Hero Power: <%=@hero.power %></p>
-<p>Hero Biography: <%=@hero.bio %></p>
-
-<% @hero.each do |element| %>
-<%= @name_param.to_s @hero.name %>
-<%= @power_param.to_s @hero.power%>
-<%= @bio_param.to_s @hero_bio%>
 <%end%>
