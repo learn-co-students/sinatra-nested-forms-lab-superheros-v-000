@@ -9,13 +9,13 @@ class App < Sinatra::Base
     end
 
     post '/teams' do
-      
+      raise params
       @team = Team.new(params[:team])#.each do |team|
         #Team.new(team)
       #end
-      @hero = Hero.new(params[:team][:members])#.each do |hero|
-        #Hero.new(hero)
-      #end
+      @hero = params[:team][:members].each do |hero|
+        Hero.new(hero)
+      end
       #binding.pry
       @motto_param = "Team Motto:"
       @name_param = "Hero Name:"
