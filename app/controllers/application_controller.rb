@@ -5,16 +5,16 @@ class App < Sinatra::Base
     set :views, Proc.new { File.join(root, "../views/") }
 
   get '/' do
-    erb :team
+    erb :super_hero
   end
 
   post '/teams' do
     @team = Team.new(params["team"])
-    params["team"]["heroes"].each {|key, val|
-      Hero.new(val)
+    params["team"]["heroes"].each {|vals|
+      Hero.new(vals)
     }
     @heroes = Hero.all
-    erb :super_hero
+    erb :team
   end
 
 end

@@ -3,7 +3,7 @@ class Hero
   @@HEROES = []
     def initialize(args)
     @name = args["name"]
-    @power = args["motto"]
+    @power = args["power"]
     @bio = args["bio"]
     @@HEROES << self
     end
