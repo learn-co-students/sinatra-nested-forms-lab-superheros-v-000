@@ -12,11 +12,11 @@ class App < Sinatra::Base
       @team = Team.new(params[:team][:name], params[:team][:motto]) 
 
       params[:team][:hero].each do |hero|
-        Superhero.new(hero[:name], hero[:power], hero[:bio])
+        Superhero.new(hero[:name], hero[:power], hero[:biography])
       end
 
       @heroes = Superhero.all
 
-      erb :teams
+      erb :team
     end
 end
