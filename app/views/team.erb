@@ -1,3 +1,15 @@
-
+<html>
+<body>
+<h1>Team Ruby</h1>
+<h2>Team Name: <%= @team["name"] %></h2>
+<h2>Team Motto: <%= @team["motto"] %></h2>
+<% @member.each do |hero| %>
+  <% hero.each do |key, val| %>
+    <% title = key.capitalize %>
+   <h2><%= "Hero #{title}: #{val}" %></h2>
+  <% end %>
+<% end %>
+</body>
+</html>
 
 
