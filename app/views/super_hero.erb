@@ -1,1 +1,18 @@
 
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Super Heroes Super Site</title>
+</head>
+<body>
+
+  <h1>Super Heroes Here</h1>
+  <h2>Super Super!</h2>
+  <% @superhero = SuperHero.new(params[:superhero]) %>
+  <%= @superhero(params[:name]) %>
+  <%= @superhero(params[:power]) %>
+  <%= @superhero(params[:bio]) %>
+
+</body>
+</html>
