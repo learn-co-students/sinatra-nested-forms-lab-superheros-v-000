@@ -7,15 +7,29 @@ class App < Sinatra::Base
 
     get '/' do
       # binding.pry
-      erb :super_hero
+      erb :new_heroes
     end
 
     # get '/superheroes' do
-    #   # binding.pry
-    #   erb :super_hero
+    #    @superhero = SuperHero.new(params)
+    #       @name = params[:name]
+    #       @power = params[:power]
+    #       @bio = params[:bio]
+    #
+    #       erb :super_hero
     # end
 
     post '/teams' do
+  # binding.pry
+      @team = Team.new(params)
+        # @name = params[:name]
+        # @motto = arams[:motto]
+        # MEMBERS << @superhero
+        params[:team][:member].each do |member, info|
+          SuperHero.new(member)
+        end
+        @members = SUPERHEROES.all
+
       erb :team
     end
 end
