@@ -1,4 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Superhero Creation</title>
+  </head>
+  <body>
+    <h1>Create a Team and Heroes!</h1>
+    <form method="POST" action="/teams">
+      <h1>Team</h1>
+        <p>Team Name:<input type="text" name="team[name]"></p>
+        <p>Team Motto:<input type="text" name="team[motto]"></p>
+      <h1>Hero 1</h1>
+        <p>Hero's Name :<input id="member1_name" type="text" name="team[members][][name]"></p>
+        <p>Hero's Power<input id="member1_power" type="text" name="team[members][][power]"></p>
+        <p>Hero's biography <input id="member1_bio" type="text" name="team[members][][bio]"></p>
+      <h1>Hero 2</h1>
+        <p>Hero's Name<input id="member2_name" type="text" name="team[members][][name]"></p>
+        <p>Hero's Power <input id="member2_power" type="text" name="team[members][][power]"></p>
+        <p>Hero's biography <input id="member2_bio" type="text" name="team[members][][bio]"></p>
+      <h1>Hero 3</h1>
+      <p>Hero's Name <input id="member3_name" type="text" name="team[members][][name]"></p>
+      <p>Hero's Power <input id="member3_power" type="text" name="team[members][][power]"></p>
+      <p>Hero's biography <input id="member3_bio" type="text" name="team[members][][bio]"></p>
+      <input type="submit" value="submit">
+    </form>
+  </body>
+</html>
 
+
+<!--
 <!doctype html>
 <html lang="en">
 <head>
@@ -18,7 +48,7 @@
 
     <h2>SuperHeroes</h2>
     <label>SuperHero's Name:</label>
-    <!-- <input id="superhero_name" type="text" name="superhero[name]"></p> -->
+
     <input type="text" id="member1_name" name="team[members][][name]">
 
     <label>SuperHero's Power:</label>
@@ -28,7 +58,7 @@
     <input type="text" id="member1_bio" name="team[members][][bio]">
 
     <label>SuperHero's Name:</label>
-    <!-- <input id="superhero_name" type="text" name="superhero[name]"></p> -->
+
     <input type="text" id="member2_name" name="team[members][][name]">
 
     <label>SuperHero's Power:</label>
@@ -38,7 +68,7 @@
     <input type="text" id="member2_bio" name="team[members][][bio]">
 
     <label>SuperHero's Name:</label>
-    <!-- <input id="superhero_name" type="text" name="superhero[name]"></p> -->
+
     <input type="text" id="member3_name" name="team[members][][name]">
 
     <label>SuperHero's Power:</label>
@@ -51,3 +81,4 @@
 </form>
 </body>
 </html>
+-->

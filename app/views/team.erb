@@ -1,7 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Team</title>
+  </head>
+  <body>
+    <h1>Team Name: <%=@team.name%></h1>
+
+    <h2>Team Motto: <%=@team.motto%></h2>
+
+    <%@members.each do |member|%>
+      <h1>Hero Name: <%=member.name%></h1>
+      <p>Hero power: <%=member.power%></p>
+      <p>Hero biography: <%=member.bio%></p>
+      <%end%>
+  </body>
 
 
-
-
+<!--
 <!doctype html>
 <html lang="en">
 <head>
@@ -15,7 +31,7 @@
     <h2> Team Name <%= @team.name %> </h2>
     <h2> Team Motto <%= @team.motto %> </h2>
 
-    <% SUPERHEROES.each do |member| %>
+    <% @members.each do |member| %>
       <h3>Hero Name: <%= member.name%></h3>
       <h3>Hero Power: <%= member.power%></h3>
       <h3>Hero Bio: <%= member.bio%></h3>
@@ -24,4 +40,4 @@
 
 
 </body>
-</html>
+</html> -->
