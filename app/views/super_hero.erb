@@ -1,1 +1,14 @@
+<form action="/teams" method="post">
+<h1>Create a Team and Heroes!</h1>
+<h2>Team</h2>
+	<p>Team Name: <input type="text" name="team[name]"></p>
+	<p>Team Motto: <input type="text" name="team[motto]"></p>
+<% 1.upto(3).each do |number| %>
 
+<h2>Hero <%= number %></h2>
+	<p>Hero Name: <input type="text" name="team[heroes][][name]" id="member<%= number%>_name"></p>
+	<p>Hero Power: <input type="text" name="team[heroes][][power]" id="member<%= number%>_power"></p>
+	<p>Hero Biography: <input type="text" name="team[heroes][][bio]" id="member<%= number%>_bio"></p>
+<%end%>
+	<input type="submit" value="submit">
+</form>
