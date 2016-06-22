@@ -6,7 +6,7 @@ class Team
   def initialize(attributes)
     @name = attributes[:name]
     @motto = attributes[:motto]
-    @@all < self
+    @@all << self
   end
 
 end
