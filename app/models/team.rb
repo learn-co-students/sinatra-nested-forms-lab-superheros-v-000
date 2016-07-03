@@ -4,8 +4,8 @@ class Team
   TEAMS = [] 
 
   def initialize(args)
-    @name = params[:name]
-    @motto = params[:motto]
+    @name = args[:name]
+    @motto = args[:motto]
     TEAMS << self
   end
 
