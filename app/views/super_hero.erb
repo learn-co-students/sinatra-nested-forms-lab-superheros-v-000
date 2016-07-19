@@ -1,1 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Superherp Form</title>
+  </head>
+  <body>
+    <h1>Create a Team and Heroes!:</h1>
+    <form action="/teams" method="post">
+      <h2>Team Info:</h2>
+      <p>Team Name: <input type="text" name="team[name]"></p>
+      <p>Team Moto: <input type="text" name="team[motto]"></p>
 
+      <h2>Hero 1 Info:</h2>
+      <p>Hero's Name: <input id="member1_name" type="text" name="team[members][][name]" ></p>
+      <p>Hero's Power: <input id="member1_power" type="text" name="team[members][][power]" ></p>
+      <p>Hero's Biography: <input id="member1_bio" type="text" name="team[members][][bio]" ></p>
+
+      <h2>Hero 2 Info:</h2>
+      <p>Hero's Name: <input id="member2_name" type="text" name="team[members][][name]" ></p>
+      <p>Hero's Power: <input id="member2_power" type="text" name="team[members][][power]" ></p>
+      <p>Hero's Biography: <input id="member2_bio" type="text" name="team[members][][bio]" ></p>
+
+      <h2>Hero 3 Info:</h2>
+      <p>Hero's Name: <input id="member3_name" type="text" name="team[members][][name]" ></p>
+      <p>Hero's Power: <input id="member3_power" type="text" name="team[members][][power]" ></p>
+      <p>Hero's Biography: <input id="member3_bio" type="text" name="team[members][][bio]" ></p>
+
+      <input type="submit" value="submit">
+    </form>
+  </body>
+</html>
