@@ -1,12 +1,12 @@
 class SuperHero
-  attr_accessor :name, :motto
-
+  attr_accessor :name, :power, :bio
   @@all = []
 
   def initialize(args)
-    @name = name[:name]
-    @motto = args[:motto]
-    @@all << slef
+    @name = args[:name]
+    @power = args[:power]
+    @bio = args[:bio]
+    @@all << self
   end
 
   def self.all
