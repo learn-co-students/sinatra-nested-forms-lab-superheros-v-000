@@ -1,3 +1,10 @@
+<h1><%= params[:team][:name] %></h1>
+<h2>Team Motto: <%= params[:team][:motto] %></h2>
 
-
-
+<% params[:team][:members].each do |x| %>
+<div class="heroes">
+<h2>Hero Name: <%= x[:name] %></h2>
+<h4>Hero Power: <%= x[:power] %></h4>
+<h4>Hero Biography: <%= x[:bio] %></h4>
+</div>
+<% end %>
