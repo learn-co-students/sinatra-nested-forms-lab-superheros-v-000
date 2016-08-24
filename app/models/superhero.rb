@@ -4,10 +4,10 @@ class SuperHero
 
   @@superheroes = []
 
-  def initialize(details)
-    @name = details[:name]
-    @power = details[:power]
-    @bio = details[:bio]
+  def initialize(args)
+    @name = args[:name]
+    @power = args[:power]
+    @bio = args[:bio]
     @@superheroes << self
   end
 
