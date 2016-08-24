@@ -13,18 +13,7 @@ class App < Sinatra::Base
       @team_motto = params[:team][:motto]
      
       @team_members = params[:team][:members]
-
-      @member_name = []
-      @member_power = []
-      @member_bio = []
-          
-      @team_members.each do |member, attrib|
-        @member_name << attrib[:name]
-        @member_power << attrib[:power]
-        @member_bio << attrib[:bio]
-      end
-
-
+      
       erb :team
     end
 
