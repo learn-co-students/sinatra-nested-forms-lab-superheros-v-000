@@ -3,9 +3,9 @@ class Member
   MEMBERS = []
   
   def initialize(stats)
-    @name = stats["name"]
-    @power = stats["power"]
-    @bio = stats["bio"]
+    @name = stats[:name]
+    @power = stats[:power]
+    @bio = stats[:bio]
     MEMBERS << self
   end
 
