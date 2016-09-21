@@ -1,3 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Super Teams</title>
+  </head>
 
+  <body>
+    <h1><%= @team_name %></h1></br>
+    <h2>Team Motto: <%= @team_motto %></h2></br>
 
-
+    <% @team_members.each.with_index do |member, index| %>
+      <h2>Hero Name: <%= @member_name[index] %></h2></br>
+      <p>Hero Power: <%= @member_power[index] %></p></br>
+      <p>Hero Biography: <%= @member_bio[index] %></p></br>
+    <% end %>
+  </body>
+</html>
