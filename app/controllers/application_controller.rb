@@ -1,8 +1,8 @@
 require 'sinatra/base'
 
 class App < Sinatra::Base
-
-    set :views, Proc.new { File.join(root, "../views/") }
+    set :root, '/home/robeymc-19419/code/labs/sinatra-nested-forms-lab-superheros-v-000'
+    set :views, Proc.new { File.join(root, "/views/") }
 
     get '/' do
       erb :index
