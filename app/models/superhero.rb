@@ -1,6 +1,6 @@
 class Superhero
 
-  SUPERHEROS = []
+  SUPERHEROES = []
 
   attr_accessor :name, :power, :bio
 
@@ -8,11 +8,11 @@ class Superhero
     @name = params[:name]
     @power = params[:power]
     @bio = params[:bio]
-    SUPERHEROS << self
+    SUPERHEROES << self
   end
 
   def self.all
-    SUPERHEROS
+    SUPERHEROES
   end
 
 end
