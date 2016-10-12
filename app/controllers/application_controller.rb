@@ -23,3 +23,14 @@ class App < Sinatra::Base
       erb :team
     end
 end
+
+#another way
+
+# <% @team_members.each.with_index do |hero, index| %>
+#   <h2>Hero Name: <%= @hero_name[index] %></h2>
+#   <p>
+#     Hero power: <%= @hero_power[index] %>
+#     <br>
+#     Hero biography: <%= @hero_bio[index] %>
+#   </p>
+# <% end %>
