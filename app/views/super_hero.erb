@@ -6,7 +6,7 @@
 </head>
 <body>
   <h1>Create a Team and Heroes!</h1>
-  <form method="POST" action="/teams">
+  <form action="/teams" method="post">
     <h2>Team</h2>
     <label for="team_name">Team Name: </label>
     <input id="team_name" type="text" name="team[name]"><br>
@@ -37,7 +37,7 @@
     <label for="hero_biography">Hero's Biography: </label>
     <input id= "member3_bio" type="text" name="team[heroes][][biography]"><br>
 
-    <input type="submit" id="submit">
+  <input type="submit" id="submit">
   </form>
 </body>
 </html>
