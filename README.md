@@ -1,3 +1,8 @@
+
+
+
+
+
 # Sinatra Nested Forms Lab: Superheroes!
 
 ## Overview
@@ -25,7 +30,7 @@ It should look something like this:
 
 ## Final Output
 
-Your params should be nested. For example, in order to see all the superheroes for the team you just created you would enter: 
+Your params should be nested. For example, in order to see all the superheroes for the team you just created you would enter:
 
 ```ruby
 params["team"]["members"]
