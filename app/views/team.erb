@@ -1,17 +1,9 @@
-<p><h1><%= @team.name %></h1></p>
-<<<<<<< HEAD
+<h1><%= @team.name %></h1>
 
-<p><h2>Team Motto: <%= @team.motto %></p>
+<h2>Team Motto: <%= @team.motto %>
 
 <% @heroes.each do |hero| %>
-  <p><h2>Hero Name: <%= hero.name %></h2></p>
+  <h3>Hero Name: <%= hero.name %></h3>
   <p>Hero Power: <%= hero.power %></p>
   <p>Hero Biography: <%= hero.biography %></p>
-=======
-<p><h2>Team Motto: <%= @team.motto %></p>
-<% @heroes.each do |hero| %>
-  <p><h2>Hero Name: <%= hero.name %></h2></p>
-  <p>Hero Power: <%= hero.power %></p>
-  <p>Hero Biography: <%= hero.bio %></p>
->>>>>>> 9b9efe1f725bfac7e250f9f30e5ec83436edb25e
 <% end %>
