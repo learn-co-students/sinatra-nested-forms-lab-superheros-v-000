@@ -10,11 +10,14 @@ class App < Sinatra::Base
     end
 
     post '/teams' do
-      @team = (params[:team][:name], params[:team][:motto])
-      @member1 = (params[:team][:members][0][:name], params[:team][:members][0][:power], params[:team][:members][0][:bio])
-      @member2 = (params[:team][:members][1][:name], params[:team][:members][1][:power], params[:team][:members][1][:bio])
-      @member3 = (params[:team][:members][2][:name], params[:team][:members][2][:power], params[:team][:members][2][:bio])
-      erb :team
-    end
+      #binding.pry
+      @team = Team.new(params[:team])
+    	params[:team][:heroes].each do |details|
+    		SuperHero.new(details)
+    	end
 
-end
+    	@heroes = SuperHero.all
+
+    	erb :'/team'
+    end
+  end
