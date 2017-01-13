@@ -32,7 +32,6 @@ class App < Sinatra::Base
   end
 =end 
 
-
    post '/teams' do
       @team = Team.new(params[:team])
 
