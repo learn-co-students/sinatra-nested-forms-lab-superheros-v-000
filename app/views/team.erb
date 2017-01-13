@@ -1,14 +1,7 @@
-<h1>Team Name: <%= team[name] %></h1>
-<h1>Team Motto: <%= team[motto] %>!</h1>
-
-<h3>Name: <%= @member1_name %></h3>
-<h4>Weight: <%= @member1_power %></h4>
-<h5>Height: <%= @member1_bio %></h5>
-
-<h3>Name: <%= @member2_name %></h3>
-<h4>Weight: <%= @member2_power %></h4>
-<h5>Height: <%= @member2_bio %></h5>
-
-<h3>Name: <%= @member2_name %></h3>
-<h4>Weight: <%= @member2_power %></h4>
-<h5>Height: <%= @member2_bio %></h5>
+<p><h1><%= @team.name %></h1></p>
+<p><h2>Team Motto: <%= @team.motto %></p>
+<% @heroes.each do |hero| %>
+  <p><h2>Hero Name: <%= hero.name %></h2></p>
+  <p>Hero Power: <%= hero.power %></p>
+  <p>Hero Biography: <%= hero.bio %></p>
+<% end %>

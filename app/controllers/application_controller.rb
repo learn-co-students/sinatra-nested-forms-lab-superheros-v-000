@@ -1,5 +1,10 @@
 require 'sinatra/base'
-require 'pry'
+#require 'pry'
+
+puts 'ok'
+
+# when I try to run my sinatra app under ... foldername .. the process immediately returns and doesnt bind to the ip or port as a listener so I can connect with the browser.
+# if I put a puts statement in the 'controller' file my message is printed to the console and then the process just exist - no webserver runs
 
 class App < Sinatra::Base
 
@@ -9,12 +14,34 @@ class App < Sinatra::Base
       erb :super_hero
     end
 
-    post '/teams' do
-      @team = (params[:team][:name], params[:team][:motto])
-      @member1 = (params[:team][:members][0][:name], params[:team][:members][0][:power], params[:team][:members][0][:bio])
-      @member2 = (params[:team][:members][1][:name], params[:team][:members][1][:power], params[:team][:members][1][:bio])
-      @member3 = (params[:team][:members][2][:name], params[:team][:members][2][:power], params[:team][:members][2][:bio])
-      erb :team
+=begin
+     post '/teams' do
+    @team_name = params[:team][:name]
+    @team_motto = params[:team][:motto]
+    @hero_name = []
+    @hero_power = []
+    @hero_bio = []
+    @team_members = params[:team][:members]
+    @team_members.each do |hero|
+      @hero_name << hero[:name]
+      @hero_power << hero[:power]
+      @hero_bio << hero[:bio]
     end
 
+    erb :team
+  end
+=end 
+
+
+   post '/teams' do
+      @team = Team.new(params[:team])
+
+    	params[:team][:heroes].each do |details|
+    		SuperHero.new(details)
+    	end
+
+    	@heroes = SuperHero.all
+
+    	erb :'/team'
+    end
 end
