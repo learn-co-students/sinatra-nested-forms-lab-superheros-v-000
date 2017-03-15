@@ -1,3 +1,24 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>Superhero and Team Registry</title>
+ </head>
+ <body>
+<div class = "superheroes">
+  <h1>Team Name: <%= @pirate.name %></h2><br>
+  <h2>Team Motto: <%= @pirate.weight %></p><br>
+</div>
+
+<% @ships.each do |ship| %>
+  <div class = "ship">
+    <h1>Ship: <%= ship.name %></h1><br>
+    <p>Type: <%= ship.type %></p><br>
+    <p>Booty: <%= ship.booty %></p><br>
+  </div><br>
+<% end %>
 
 
 
+</body>
+</html>

@@ -9,20 +9,20 @@
   <h1>Create a Team and Heroes!</h1>
 
   <form action="/teams" method="post">
-    Team Name: <input id=team[name] type="text" name="team[name]"><br>
-    Team Motto: <input id=pirate[weight] type="text" name="pirate[weight]"><br>
+    Team Name: <input id="team[name]" type="text" name="team[name]"><br>
+    Team Motto: <input id="team[motto]" type="text" name="team[motto]"><br>
     <h2>Hero 1</h2>
-    Hero's Name: <input id=members[name] type="text" name="members[name]"><br>
-    Hero's Power: <input id=members[power] type="text" name="members[power]"><br>
-    Hero's Biography: <input id=members[biography] type="text" name="members[biography]"><br>
+    Hero's Name: <input id="member1_name" type="text" name="[team][members][][name]"><br>
+    Hero's Power: <input id="member1_power" type="text" name="[team][members][][power]"><br>
+    Hero's Biography: <input id="member1_bio" type="text" name="[team][members][][biography]"><br>
     <h2>Hero 2</h2>
-    Hero's Name: <input id=members[name] type="text" name="members[name]"><br>
-    Hero's Power: <input id=members[power] type="text" name="members[power]"><br>
-    Hero's Biography: <input id=members[biography] type="text" name="members[biography]"><br>
+    Hero's Name: <input id="member2_name" type="text" name="[team][members][][name]"><br>
+    Hero's Power: <input id="member2_power" type="text" name="[team][members][][power]"><br>
+    Hero's Biography: <input id="members2_bio" type="text" name="[team][members][][biography]"><br>
     <h2>Hero 3</h2>
-    Hero's Name: <input id=members[name] type="text" name="members[name]"><br>
-    Hero's Power: <input id=members[power] type="text" name="members[power]"><br>
-    Hero's Biography: <input id=members[biography] type="text" name="members[biography]"><br><br>
+    Hero's Name: <input id="member3_name" type="text" name="[team][members][][name]"><br>
+    Hero's Power: <input id="member3_power" type="text" name="[team][members][][power]"><br>
+    Hero's Biography: <input id="members3_bio" type="text" name="[team][members][][biography]"><br><br>
     <input type="submit" value="Submit">
   </form>
   </body>
