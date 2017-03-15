@@ -10,14 +10,15 @@
   <p><%= params[:team][:motto] %></p><br>
 </div>
 
-<div class = "super_hero_info">
-  <p>Hero Name: <%= params[:team][:member][i][:name] %></p><br>
-  <p>Hero Power: <%= params[:team][:member][i][:power] %></p><br>
-  <p>Hero Biography: <%= params[:team][:member][i][:biography] %></p><br>
-</div>
-
-
-
+<% i = 0 %>
+<% while i < params[:team][:members].length %>
+  <div class = "super_hero_info">
+    <p>Hero Name: <%= params[:team][:members][i][:name] %></p><br>
+    <p>Hero Power: <%= params[:team][:members][i][:power] %></p><br>
+    <p>Hero Biography: <%= params[:team][:members][i][:biography] %></p><br>
+  </div>
+  <% i += 1 %>
+<% end %>
 
 </body>
 </html>
