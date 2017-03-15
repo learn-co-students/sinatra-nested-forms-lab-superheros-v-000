@@ -5,18 +5,17 @@
   <title>Superhero and Team Registry</title>
  </head>
  <body>
-<div class = "superheroes">
-  <h1>Team Name: <%= @pirate.name %></h2><br>
-  <h2>Team Motto: <%= @pirate.weight %></p><br>
+<div class = "team_info">
+  <h1>Team <%= params[:team][:name] %></h2>
+  <p><%= params[:team][:motto] %></p><br>
 </div>
 
-<% @ships.each do |ship| %>
-  <div class = "ship">
-    <h1>Ship: <%= ship.name %></h1><br>
-    <p>Type: <%= ship.type %></p><br>
-    <p>Booty: <%= ship.booty %></p><br>
-  </div><br>
-<% end %>
+<div class = "super_hero_info">
+  <p>Hero Name: <%= params[:team][:member][i][:name] %></p><br>
+  <p>Hero Power: <%= params[:team][:member][i][:power] %></p><br>
+  <p>Hero Biography: <%= params[:team][:member][i][:biography] %></p><br>
+</div>
+
 
 
 
