@@ -5,8 +5,26 @@
 </head>
 <body>
   <form model="POST">
-    <p>Name: </p>
-    <p>Motto: </p>
+    <h1>Create a Team and Heroes!</h1>
+    <p>Team Name: <input type="text" name="team[name]"></p>
+    <p>Team Motto: <input type="text" name="team[motto]"></p>
+
+    <h2>Hero 1</h2>
+    <p>Hero Name: <input type="text" name="team[hero][][name]"></p>
+    <p>Hero Power: <input type="text" name="team[hero][][power]"></p>
+    <p>Hero Bio: <input type="text" name="team[hero][][bio]"></p>
+
+    <h2>Hero 2</h2>
+    <p>Hero Name: <input type="text" name="team[hero][][name]"></p>
+    <p>Hero Power: <input type="text" name="team[hero][][power]"></p>
+    <p>Hero Bio: <input type="text" name="team[hero][][bio]"></p>
+
+    <h2>Hero 3</h2>
+    <p>Hero Name: <input type="text" name="team[hero][][name]"></p>
+    <p>Hero Power: <input type="text" name="team[hero][][power]"></p>
+    <p>Hero Bio: <input type="text" name="team[hero][][bio]"></p>
+
+    <input type="submit" name="Submit">
   </form>
 </body>
 </html>
