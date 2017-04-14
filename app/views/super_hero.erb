@@ -1,1 +1,52 @@
+<h1>Create a Team and Heroes!</h1>
 
+<form method="POST" action="/teams">
+  <!-- team -->
+  <h2>Team Information</h2>
+
+  <h3><label for="team_name">Team Name:</label></h3>
+  <input id="team_name" type="text" name="team[name]"/>
+
+  <h3><label for="team_motto">Team Motto:</label></h3>
+  <input id="team_motto" type="text" name="team[motto]"/>
+
+  <h2>Hero Information</h2>
+  <!-- hero 1 -->
+
+  <h3>Hero 1</h3>
+  <h4><label for="member1_name">Hero's Name:</label></h4>
+  <input id="member1_name" type="text" name="team[members][][name]"/>
+
+  <h4><label for="member1_power">Hero's Power:</label></h4>
+  <input id="member1_power" type="text" name="team[members][][power]"/>
+
+  <h4><label for="member1_bio">Hero's Biography:</label></h4>
+  <input id="member1_bio" type="text" name="team[members][][biography]"/>
+
+  <!-- hero 2 -->
+
+  <h3>Hero 2</h3>
+
+  <h4><label for="member2_name">Hero's Name:</label></h4>
+  <input id="member2_name" type="text" name="team[members][][name]"/>
+
+  <h4><label for="member2_power">Hero's Power:</label></h4>
+  <input id="member2_power" type="text" name="team[members][][power]"/>
+
+  <h4><label for="memeber2_bio">Hero's Biography:</label></h4>
+  <input id="member2_bio" type="text" name="team[members][][biography]"/>
+
+  <!-- hero 3 -->
+
+  <h3>Hero 3</h3>
+
+  <h4><label for="memeber3_name">Hero's Name:</label></h4>
+  <input id="member3_name" type="text" name="team[members][][name]"/>
+
+  <h4><label for="member3_power">Hero's Power:</label></h4>
+  <input id="member3_power" type="text" name="team[members][][power]"/>
+
+  <h4><label for="member3_bio">Hero's Biography:</label></h4>
+  <input id="member3_bio" type="text" name="team[members][][biography]"/><br>
+  <input id="submit" type="submit" name="submit">
+</form>
