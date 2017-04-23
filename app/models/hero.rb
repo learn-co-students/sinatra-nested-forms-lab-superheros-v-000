@@ -1,4 +1,3 @@
-
 class Hero
   attr_accessor :name, :power, :bio
   @@heroes = []
@@ -12,5 +11,4 @@ class Hero
   def self.all
     @@heroes
   end
-
 end
