@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Team Creation</title>
+  </head>
+  <body>
+    <h1>Create a Team and Heroes!</h1>
+
+    <form action="/teams" method="post">
+      <label for="team[name]">Team Name:</label><input type="text" name="team[name]" id="team[name]"><br>
+      <label for="team[motto]">Team Motto:</label><input type="text" name="team[motto]" id="team[motto]"><br>
+
+      <%3.times{ |x| %>
+        <h1>Hero <%=x+1%></h1>
+        <label for="member<%=x+1%>_name">Heros Name:</label><input type="text" name="team[members][][name]" id="member<%=x+1%>_name"><br>
+        <label for="member<%=x+1%>_power">Heros Power:</label><input type="text" name="team[members][][power]" id="member<%=x+1%>_power"><br>
+        <label for="member<%=x+1%>_bio">Heros Biography:</label><input type="text" name="team[members][][bio]" id="member<%=x+1%>_bio"><br>
+      <%} %>
+
+      <button id="submit" type="submit" name="button">Submit</button>
+    </form>
+  </body>
+</html>
