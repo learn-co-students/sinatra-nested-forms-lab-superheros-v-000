@@ -15,3 +15,18 @@ group :test do
   gem 'capybara', '2.5.0'
   gem 'rack-test', '>= 0.5.4'
 end
+
+# source "https://rubygems.org"
+#
+# gem 'sinatra', require: 'sinatra/base'
+# gem 'sinatra-reloader', require: false
+# gem 'shotgun'
+# gem 'pry'
+# gem 'tux'
+# gem 'require_all'
+#
+# group :test do
+#   gem 'rspec'
+#   gem 'rack-test'
+#   gem 'capybara'
+# end
