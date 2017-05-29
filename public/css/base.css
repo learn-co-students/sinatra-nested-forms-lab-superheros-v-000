@@ -1,0 +1,23 @@
+body{
+  background: url('../img/superback.jpg');
+  background-size: cover;
+}
+.jumbotron {
+  margin-top: 20%;
+    background: rgba(0,0,0,.02);
+}
+h2, h1, p{
+  text-align: center;
+}
+input.form-control.form-quarter {
+    width: 33%;
+    display: inline-block;
+}
+input.form-control.form-half {
+    width: 49.8%;
+    display: inline-block;
+}
+input#submit {
+    margin: 0 auto;
+    display: block;
+}
