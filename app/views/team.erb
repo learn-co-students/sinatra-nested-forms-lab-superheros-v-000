@@ -1,8 +1,10 @@
 <h1>Team <%= @team.name %>: </h1>
 <h2>Team Motto: <%= @team.motto %></h2>
-
-<% @team.members.each do |hero| %>
+<p id="doneLoading">Done Loading.</p>
+<% @team.super_heros.each do |hero| %>
 	<b>Hero Name: </b><%= hero.name %> <br> 
 	<b>Hero Power: </b><%= hero.power %> <br>
 	<b>Hero Biography: </b><%= hero.bio %> <br><br>
 <% end %>
+
+

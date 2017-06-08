@@ -8,12 +8,20 @@ class App < Sinatra::Base
     	erb :super_hero
     end
 
+    get '/team/:id' do 
+        tid = params[:id].gsub(/[^\d]/, "").to_i
+        @team = Team.find(params[:id])
+
+        erb :team
+    end
+
     post '/teams' do 
     	
-    	@team = Team.create_from_params(params[:team])
-    	@team.create_and_add_members_from_params(params[:team][:members])
+    	@team = Team.new({name: params[:team][:name], motto: params[:team][:motto]})
+        @team.super_heros.build(params[:team][:members])
+        @team.save
 
-    	erb :team
+    	redirect to :"/team/#{@team.id}"
     end
 
 end
