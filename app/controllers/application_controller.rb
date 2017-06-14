@@ -1,7 +1,7 @@
 require 'sinatra/base'
 
 class App < Sinatra::Base
-
+#have started adding active record but not yet completed 
     set :views, Proc.new { File.join(root, "../views/") }
 
     get '/' do 
