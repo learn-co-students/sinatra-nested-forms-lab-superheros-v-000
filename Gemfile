@@ -9,6 +9,10 @@ gem 'thin', '1.6.4'
 gem 'shotgun', '0.9'
 gem 'pry', '0.10.3'
 gem 'require_all', '1.3.2'
+gem 'sqlite3', '1.3.13'
+gem 'activerecord', '5.1.1'
+gem 'sinatra-activerecord'
+
 
 group :test do
   gem 'rspec', '3.3.0'

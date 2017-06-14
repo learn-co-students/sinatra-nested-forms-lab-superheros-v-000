@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Create A Hero</title>
+</head>
+<body>
+<h1>Create a Team and Heroes!</h1>
+<form method="post" action="/teams">
+	<h4>Team Name:</h4> <input type="text" name="team[name]">
+	<h4>Team Motto:</h4>	<input type="text" name="team[motto]">
+	<h4>List Of Heroes</h4>
+	First Hero
+	Name: <input type="text" name="team[:heroes][][:name]" id="member1_name"><br>
+	Super Power: <input type="text" name="team[:heroes][][:supperpower]" id="member1_power"><br>
+	Hero Biography: <input type="text" name="team[:heroes][][:biography]" id="member1_bio"> <br><br>
+	Second Hero
+	Name: <input type="text" name="team[:heroes][][:name]" id="member2_name"><br>
+	Super Power: <input type="text" name="team[:heroes][][:supperpower]" id="member2_power"><br>
+	Hero Biography: <input type="text" name="team[:heroes][][:biography]" id="member2_bio"> <br><br>
+	Third Hero
+	Name: <input type="text" name="team[:heroes][][:name]" id="member3_name"><br>
+	Super Power: <input type="text" name="team[:heroes][][:supperpower]" id="member3_power"><br>
+	Hero Biography: <input type="text" name="team[:heroes][][:biography]" id="member3_bio"> <br><br>
+	<input type="submit" id="submit">
+</form>
+</body>
+</html>
