@@ -1,3 +1,16 @@
+<h1>Team Ruby</h1>
+
+<div class="team">
+  <h3>Name: <%=@team_name%></h3><br>
+  <h3>Team Motto: <%=@team_motto%></h3><br>
+</div><br>
 
 
-
+<h1>Superheroes</h1>
+<% @superheroes.each.with_index do |superhero, index| %>
+  <div class="superhero">
+    <p>Hero Name: <%= @hero_names[index] %></p><br>
+    <p>Hero Power: <%= @hero_powers[index] %></p><br>
+    <p>Hero Biography: <%= @hero_bios[index] %></p><br>
+  </div><br>
+<% end %>
