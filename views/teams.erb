@@ -1,0 +1,20 @@
+
+<% params[:team][:members].each{|hero| SuperHero.new(hero[:name], hero[:power], hero[:bio])}%>
+
+
+<h1> <%= params[:team][:name]%> </h1>
+<h5>Team Motto: <%= params[:team][:motto]%></h5>
+
+
+<% SuperHero.all.each_with_index {|hero, index| %>
+
+<h3> Hero <%=index+1%></h3>
+<p> Hero Name: <%=hero.name %> </p>
+<p> Hero Power: <%=hero.power %> </p>
+<p> Hero Biography: <%=hero.bio %> </p>
+
+<%}%>
+
+
+
+
