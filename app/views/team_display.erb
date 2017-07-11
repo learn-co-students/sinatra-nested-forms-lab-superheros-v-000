@@ -1,0 +1,14 @@
+<% Team.all.each do |team| %>
+
+  <h2> <%= team.name %> </h2>
+  <h3> Team Motto: <%= team.motto %> </h3>
+
+  <% team.members.each do |member| %>
+
+    <h3> Hero Name: <%= member.name %> </h3>
+    <p> Hero Power: <%= member.power %> </p>
+    <p> Hero Biography: <%= member.bio %> </p>
+
+  <% end %>
+
+<% end %>
