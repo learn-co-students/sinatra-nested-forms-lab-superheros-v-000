@@ -1,5 +1,5 @@
 require 'sinatra/base'
-
+require 'pry'
 class App < Sinatra::Base
 
     set :views, Proc.new { File.join(root, "../views/") }
@@ -10,12 +10,10 @@ class App < Sinatra::Base
 
     post "/teams" do
       @team = Team.new(params[:team])
-
       params[:team][:members].each do |details|
-        SupeHero.new(details).assign_team(@team)
+        @team.add_member(SuperHero.new(details))
       end
-
-      @heroes = SupeHero.all
+      @superhero = @team.members
       erb :team
     end
 end

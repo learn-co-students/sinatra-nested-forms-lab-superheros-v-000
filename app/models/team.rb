@@ -3,8 +3,7 @@ class Team
   def initialize(args)
     self.name = args[:name]
     self.motto = args[:motto]
-    self.member = args[:member]
-    self.members << super_hero
+    self.members = []
   end
 
   def add_member(super_hero)
