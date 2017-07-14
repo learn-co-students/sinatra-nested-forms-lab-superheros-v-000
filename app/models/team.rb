@@ -4,7 +4,7 @@ class Team
     self.name = args[:name]
     self.motto = args[:motto]
     self.member = args[:member]
-    self.members << hero
+    self.members << super_hero
   end
 
   def add_member(super_hero)
