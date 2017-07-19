@@ -20,6 +20,7 @@ describe App do
     it 'submits the form' do
       visit '/'
       fill_in("team[name]", :with => "Team Ruby")
+      binding.pry
       fill_in("team[motto]", :with => "We love Ruby!")
       fill_in("member1_name", :with => "Amanda")
       fill_in("member1_power", :with => "Ruby")
