@@ -4,13 +4,14 @@ class Member
   MEMBERS = []
 
   def initialize(args)
-    @name = name
-    @power = power
-    @bio = bio
+    #binding.pry
+    @name = args[:name]
+    @power = args[:power]
+    @bio = args[:bio]
     MEMBERS << self
   end
 
-  def self.all 
+  def self.all
     MEMBERS
   end
 end
