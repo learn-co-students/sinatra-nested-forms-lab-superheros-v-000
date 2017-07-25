@@ -1,3 +1,27 @@
+<h1>Team</h1>
 
+<div class="team">
+  <h3>Name: <%= @team.name %></h3><br>
+  <h4>Team Motto: <%= @team.motto %></h4>
+</div><br>
 
+<h2><%= @team.name %>'s First Hero</h2>
+   <div class="super_hero">
+     <p>Name: <%= Super_hero.all[0].name %></p><br>
+     <p>Hero Power: <%= Super_hero.all[0].power %></p><br>
+     <p>Hero Biography: <%= Super_hero.all[0].biography %></p><br>
+   </div><br>
 
+<h2><%= @team.name %>'s Second Hero</h2>
+    <div class="super_hero">
+     <p>Name: <%= Super_hero.all[1].name %></p><br>
+     <p>Hero Power: <%= Super_hero.all[1].power %></p><br>
+     <p>Hero Biography: <%= Super_hero.all[1].biography %></p><br>
+    </div><br>
+
+<h2><%= @team.name %>'s Third Hero</h2>
+    <div class="super_hero">
+     <p>Name: <%= Super_hero.all[2].name %></p><br>
+     <p>Hero Power: <%= Super_hero.all[2].power %></p><br>
+     <p>Hero Biography: <%= Super_hero.all[2].biography %></p><br>
+    </div><br>
