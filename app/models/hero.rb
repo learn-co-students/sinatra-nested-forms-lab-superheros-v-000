@@ -4,11 +4,10 @@ class Hero
   @@all = []
 
   def initialize(args)
-    @name =  args[":name"]
-    @power = args[":power"]
-    @bio =   args[":bio"]
-    @@all << self 
-    #binding.pry => this works 
+    @name =  args[:name]
+    @power = args[:power]
+    @bio =   args[:bio]
+    @@all << self
   end
 
   def self.all 
