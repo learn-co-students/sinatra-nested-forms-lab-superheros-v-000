@@ -1,4 +1,5 @@
 require 'sinatra/base'
+require 'pry'
 
 class App < Sinatra::Base
 
@@ -9,7 +10,9 @@ class App < Sinatra::Base
     end
 
     post '/teams' do
-      #@team = Team.new(params[:name], params[:motto])
+      #puts params
+      @team = Team.new(params[:name], params[:motto])
+      binding.pry
       erb :'team'
     end
 
