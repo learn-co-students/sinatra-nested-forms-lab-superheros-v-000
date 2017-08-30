@@ -1,3 +1,71 @@
-
-
-
+  <h1>Create a Team and Heroes!</h1>
+  <form method = 'post' action='/teams'>
+    <table style = 'width:100%'>
+      <tr>
+        <th align = 'right'>Team Name: </th>
+        <td><input type = 'text' name = 'team[name]'></td>
+      </tr>
+      <tr>
+        <th align = 'right' >Team Motto: </th>
+        <td><input type = 'text' name = 'team[motto]'></td>
+      </tr>
+    </table>
+    <br>
+      <table style = 'width:100%'>
+      <tr>
+        <th align = 'right'><h2>Hero 1</h2></th>
+      </tr>
+      <tr>
+        <th align = 'right'>Hero's Name: </th>
+        <td><input type = 'text' id = 'member1_name' name = 'team[member][][name]'></td>
+      </tr>
+      <tr>
+        <th align = 'right'>Hero's Power: </th>
+        <td><input type = 'text' id = 'member1_power' name = 'team[member][][power]'></td>
+      </tr>
+      <tr>
+        <th align = 'right'>Hero's Biography: </th>
+        <td><input type = 'text' id = 'member1_bio' name = 'team[member][][bio]'></td>
+      </tr>
+    </table>
+    <br>
+    <table style = 'width:100%'>
+      <tr>
+        <th align= 'right'><h2>Hero 2</h2></th>
+      </tr>
+      <tr>
+        <th align = 'right'>Hero's Name: </th>
+        <td><input type = 'text' id = 'member2_name' name = 'team[member][][name]'></td>
+      </tr>
+      <tr>
+        <th align = 'right'>Hero's Power: </th>
+        <td><input type = 'text' id = 'member2_power' name = 'team[member][][power]'></td>
+      </tr>
+      <tr>
+        <th align = 'right'>Hero's Biography: </th>
+        <td><input type = 'text' id = 'member2_bio' name = 'team[member][][bio]'></td>
+      </tr>
+    </table>
+    <br>
+    <table style = 'width:100%'>
+      <tr>
+        <th align= 'right'><h2>Hero 3</h2></th>
+      </tr>
+      <tr>
+        <th align = 'right'>Hero's Name: </th>
+        <td><input type = 'text' id = 'member3_name' name = 'team[member][][name]'></td>
+      </tr>
+      <tr>
+        <th align = 'right'>Hero's Power: </th>
+        <td><input type = 'text' id = 'member3_power' name = 'team[member][][power]'></td>
+      </tr>
+      <tr>
+        <th align = 'right'>Hero's Biography: </th>
+        <td><input type = 'text' id = 'member3_bio' name = 'team[member][][bio]'></td>
+      </tr>
+      <tr>
+        <th></th>
+        <td><input type = 'submit' value = 'Submit' id = 'submit'></td>
+      </tr>
+    </table>
+  </form>
