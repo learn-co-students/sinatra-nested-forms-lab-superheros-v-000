@@ -1,3 +1,17 @@
+<div class="jumbotron">
+  <h1><%=@team.name%></h1>
+  <h2>Team Motto: <%= @team.motto %></h2>
+</div>
 
-
-
+<h1>Heros:</h1>
+<div class="row">
+  <% @team.heros.each do |hero| %>
+  <div class="col-md-4">
+    <h2>Hero Name: <%= hero.name %></h2>
+    <p>
+      Hero Power: <%= hero.power%><br />
+      Hero Biography: <%= hero.bio%><br />
+    </p>
+  </div>
+  <% end %>
+</div>

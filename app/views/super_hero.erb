@@ -1,1 +1,17 @@
+<div class="jumbotron">
+  <h1>Create a Team and Heroes!</h1>
 
+  <form method="post" action="/teams">
+    <input placeholder="Team Name" class="form-control form-half"  type="text" name="team[name]" />
+    <input placeholder="Team Motto" class="form-control form-half"  type="text" name="team[motto]" />
+    <% 3.times do |i| %>
+      <h2>Hero <%= i + 1 %></h2>
+      <input placeholder="Name" id="member<%=i+1%>_name" class="form-control form-quarter" type="text" name="team[members][][name]" />
+      <input placeholder="Power" id="member<%=i+1%>_power" class="form-control form-quarter" type="text" name="team[members][][power]" />
+      <input placeholder="Biography" id="member<%=i+1%>_bio" class="form-control form-quarter" type="text" name="team[members][][bio]" />
+    <% end %>
+    <br />
+    <br />
+    <input type="submit" class="btn btn-lg btn-warning" id="submit" />
+  </form>
+</div>
