@@ -1,1 +1,58 @@
+<form method='POST', action='/teams'>
+  <h1>Create a Team and Heroes!</h1>
+  <p>
+    <label for='team_name'>Team Name: </label >
+    <!-- line = box that appears on screen, name = params info, id for db?-->
+    <input type='text' name='team[name]' id='team[name]' />
+  </p>
+  <p>
+    <label for='team_motto'>Team Motto: </label >
+    <input type='text' name='team[motto]' id='team[motto]' />
+  </p>
 
+  <h2>Hero 1</h2>
+    <p>
+      <label for='member1_name'>Heros's Name: </label >
+      <input type='text' name='team[member][][name]' id='member1_name' />
+    </p>
+    <p>
+      <label for='member1_power'>Heros's Power: </label >
+      <input type='text' name='team[member][][power]' id='member1_power' />
+    </p>
+    <p>
+        <label for='member1_bio'>Heros's Biography: </label >
+        <input type='text' name='team[member][][bio]' id='member1_bio' />
+    </p>
+
+  <h2>Hero 2</h2>
+    <p>
+      <label for='member2_name'>Heros's Name: </label >
+      <input type='text' name='team[member][][name]' id='member2_name' />
+    </p>
+    <p>
+      <label for='member2_power'>Heros's Power: </label >
+      <input type='text' name='team[member][][power]' id='member2_power' />
+    </p>
+    <p>
+        <label for='member2_bio'>Heros's Biography: </label >
+        <input type='text' name='team[member][][bio]' id='member2_bio' />
+    </p>
+
+  <h2>Hero 3</h2>
+    <p>
+      <label for='member3_name'>Heros's Name: </label >
+      <input type='text' name='team[member][][name]' id='member3_name' />
+    </p>
+    <p>
+      <label for='member3_power'>Heros's Power: </label >
+      <input type='text' name='team[member][][power]' id='member3_power' />
+    </p>
+    <p>
+        <label for='member3_bio'>Heros's Biography: </label >
+        <input type='text' name='team[member][][bio]' id='member3_bio' />
+    </p>
+  <!-- easy way to make a submit something...the button keyword needed 2
+        make an actually button-->
+  <!-- <input type='submit'> -->
+  <button type='submit' value="submit">Submit</button>
+</form>

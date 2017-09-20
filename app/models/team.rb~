@@ -1,0 +1,20 @@
+class Team
+  attr_accessor :name, :motto
+  TEAMS = []
+
+  def initialize(params)
+    # this way works if just pass params in @ contorller
+    # @name = params[:team][:name]
+    # @motto = params[:team][:motto]
+
+    # if pass params[:team] then use this code
+    @name = params[:name]
+    @motto = params[:motto]
+
+    TEAMS << self
+  end
+
+  def self.all
+    TEAMS
+  end
+end
