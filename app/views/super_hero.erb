@@ -1,1 +1,37 @@
 
+<h1>Create a Team and Heroes!</h1>
+<br>
+
+<form action="/teams" method="post">
+	<div class="form-group">
+		<h3>Team Info</h3>
+	<label>Team Name:</label><input type="text" name="team[name]">
+	<label>Team Motto:</label><input type="text" name="team[motto]">
+		</div>
+	<br>
+	<div class="form-group">
+		<h3>First Hero</h3>
+		<label>Hero Name:</label><input id="member1_name" type="text" name="team[heroes][][name]">
+		<label>Hero Power:</label><input id="member1_power" type="text" name="team[heroes][][power]">
+		<label>Hero's Biography:</label><input id="member1_bio" type="textarea" name="team[heroes][][bio]]">
+	</div>
+	<br>
+	<div class="form-group">
+		<h3>Second Hero</h3>
+		<label>Hero Name:</label><input id="member2_name" type="text" name="team[heroes][][name]">
+		<label>Hero Power:</label><input id="member2_power" type="text" name="team[heroes][][power]">
+		<label>Hero's Biography:</label><input id="member2_bio" type="textarea" name="team[heroes][][bio]]">
+	</div>
+	<br>
+	<div class="form-group">
+		<h3>Third Hero</h3>
+		<label>Hero Name:</label><input id="member3_name" type="text" name="team[heroes][][name]">
+		<label>Hero Power:</label><input id="member3_power" type="text" name="team[heroes][][power]">
+		<label>Hero's Biography:</label><input id="member3_bio" type="textarea" name="team[heroes][][bio]]">
+	</div>
+	<br>
+	<div class="form-group">
+	<input type="submit" id="submit" value= "Submit">
+	</div>
+
+</form>
