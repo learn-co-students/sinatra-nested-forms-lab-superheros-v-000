@@ -1,12 +1,11 @@
-#very smell. please refactor.
-<h1><%= @team.name %></h1>
-<h2>Team Motto: <%= @team.motto %></h2>
-<h1>Hero Name: <%= @members[0].name %>
-Hero Power: <%= @members[0].power %><br>
-Hero Biography: <%= @members[0].bio %>
-<h1>Hero Name: <%= @members[1].name %>
-Hero Power: <%= @members[1].power %><br>
-Hero Biography: <%= @members[1].bio %>
-<h1>Hero Name: <%= @members[2].name %>
-Hero Power: <%= @members[2].power %><br>
-Hero Biography: <%= @members[2].bio %>
+<h1><%= @team_name %></h1>
+<h2>Team Motto: <%= @team_motto %></h2>
+
+<% @team_members.each.with_index do |hero, index| %>
+  <h2>Hero Name: <%= @hero_name[index] %></h2>
+  <p>
+    Hero power: <%= @hero_power[index] %>
+    <br>
+    Hero biography: <%= @hero_bio[index] %>
+  </p>
+<% end %>
