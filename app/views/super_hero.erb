@@ -1,1 +1,24 @@
 
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Super Hero</title>
+  </head>
+  <body>
+
+
+    <h1> <%=params[:team][:name] %> </h1>
+    <h2>Team Motto: <%=params[:team][:motto] %> </h2>
+    <% params[:team][:members].each.with_index do |h,i|  %>
+    <h3>Hero No. <%=i+1 %> </h3>
+    <em>Hero Name: <%=h[:name] %></em>
+    <br>
+    <em>Hero Power: <%=h[:power] %></em>
+    <br>
+    <em>Hero Biography: <%=h[:bio] %></em>
+    <br>
+     <%end %>
+
+  </body>
+</html>
