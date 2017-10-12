@@ -1,0 +1,7 @@
+<% @teams.each.with_index(1) do |team, i| %>
+  <ul>
+  <%= i %>
+  <li>Team Name: <%= team.name %></li>
+  <li>Team Motto: <%= team.motto %></li>
+  </ul>
+<% end %>
