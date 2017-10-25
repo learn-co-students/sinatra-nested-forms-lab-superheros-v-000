@@ -1,3 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Superheroes</title>
+  </head>
 
+  <body>
+    <h1><%=@team.name%></h1>
+    <h2><label>Team Motto: </label><%=@team.motto%></h2>
 
+    <%@heroes.each do |hero|%>
+    <h2><label>Hero Name: </label><%=hero.name%></h2>
+    <p><label>Hero Power: </label><%=hero.power%></p>
+    <p><label>Hero Biography: </label><%=hero.bio%></p>
+    <%end%>
+  </body>
 
+</html>
