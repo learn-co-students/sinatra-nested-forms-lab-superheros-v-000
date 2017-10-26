@@ -1,3 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Super Hero Team</title>
+  </head>
+  <body>
+    <h1> <%= @params[:team][:name] %></h1>
+    <h2>Team Motto: <%= @params[:team][:motto] %> </h2>
+    <br>
+    <h2>Hero Name: <%= @params[:team][:members][0][:name] %></h2>
+    <h3>Hero Power: <%= @params[:team][:members][0][:power] %></h3>
+    <h3>Hero Biography: <%= @params[:team][:members][0][:bio] %></h3>
+    <br>
+    <h2>Hero Name: <%= @params[:team][:members][1][:name] %></h2>
+    <h3>Hero Power: <%= @params[:team][:members][1][:power] %></h3>
+    <h3>Hero Biography: <%= @params[:team][:members][1][:bio] %></h3>
+    <br>
+    <h2>Hero Name: <%= @params[:team][:members][2][:name] %></h2>
+    <h3>Hero Power: <%= @params[:team][:members][2][:power] %></h3>
+    <h3>Hero Biography: <%= @params[:team][:members][2][:bio] %></h3>
 
-
-
+    </body>
+  </html>
