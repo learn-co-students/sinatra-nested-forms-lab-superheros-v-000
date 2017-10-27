@@ -40,7 +40,7 @@ When you post to this form you should render a page that displays the name of th
 
 Your view should display something like this:
 
-![team.erb](http://i.imgur.com/SsVQ5e0.png)
+![team.erb](http://i.imgur  .com/SsVQ5e0.png)
 
 ## Deliverables
 
