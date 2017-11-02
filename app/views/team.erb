@@ -1,3 +1,22 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>Heroes</title>
+ </head>
+ <body>
+    <h1>Create a Team and Heroes!</h1>
 
-
-
+    <form action="/teams" method="post">
+      <h1><%=@team.name%></h1>
+      <h2>Team Motto: <%=@team.motto%></h2>
+      <% @members.each do |member| %>
+        <br>
+        <h2>Hero Name: <%=member.name%></h2>
+        <br>
+        <p>Hero Power: <%=member.power%></p>
+        <p>Hero Biography: <%=member.bio%></p>
+      <% end %>
+    </form>
+  </body>
+</html>
