@@ -1,12 +1,10 @@
-<h1>New Team</h1>
+<h1><%=params[:team][:name]%></h1>
+<h2>Team Motto: <%=params[:team][:motto]%></h2>
+<%params[:team][:heroes].each_with_index do |hero_data, index|%>
 
-<h2><%=params[:team][:name]%></h2>
-<h3>Team Motto: <%=params[:team][:motto]</h3>
-
-<% params[:team][:heroes].each_with_index do |hero_data, index| %>
   <p>Hero Name: <%=hero_data[:name]%></p>
   <p>Hero Power: <%=hero_data[:power]%></p>
-  <p>Hero Bio: <%=hero_data[:bio]%></p>
+  <p>Hero Biography: <%=hero_data[:bio]%></p>
 <%end%>
 
 
