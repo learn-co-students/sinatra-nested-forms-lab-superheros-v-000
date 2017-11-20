@@ -6,18 +6,27 @@ class App < Sinatra::Base
 
 
     get '/' do
-    	render superhero form 
+    	 
     	erb :super_hero
     end 
 
-    post '/teams' do
-    	submits the form 
-    	erb :team
-    end 
 
+    post '/teams' do
+    	team = Team.new[name: params[:team][:name], motto: params[:team][:motto]]   	
+    		
+    	params[:team][:members].each do |hero_data|
+    		member = SuperHero.create(hero_data)
+    		team.member = member
+    		member.save
+    	end 
+    	erb :team
+
+
+    end 
 
 end 
 
+ 
 
 # team = 
 #  {name=>
