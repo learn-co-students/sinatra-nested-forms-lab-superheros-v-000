@@ -6,22 +6,21 @@ class App < Sinatra::Base
 
 
     get '/' do
-    	 
-    	erb :super_hero
+      erb :super_hero
     end 
-
+		# post '/super_hero' do
+		#     "Hello World"
+		#   end
 
     post '/teams' do
-    	team = Team.new[name: params[:team][:name], motto: params[:team][:motto]]   	
+    	team = Team.new(name: params[:team][:name], motto: params[:team][:motto])   	
     		
-    	params[:team][:members].each do |hero_data|
-    		member = SuperHero.create(hero_data)
-    		team.member = member
-    		member.save
+    	params[:team][members].each do |hero_data|
+    		@hero = SuperHero.new(hero_data)
+    		team.hero = hero
+    	
     	end 
     	erb :team
-
-
     end 
 
 end 
