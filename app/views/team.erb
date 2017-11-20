@@ -9,7 +9,7 @@
 	<% @team.members.each_with_index do |hero, index| %>
 	<p>Hero <%= index + 1 %></p>
 	<ul>
-		<li>Hero Name:<%= hero.name %></li>
+		<li>Hero Name: <%= hero.name %></li>
 		<li>Hero Power: <%= hero.power %></li>
 		<li>Hero Biography: <%= hero.bio %></li>
 	<% end %>

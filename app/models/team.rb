@@ -1,10 +1,13 @@
 class Team
-	attr_accessor :name, :motto
+	attr_accessor :name, :motto, :members
+	
 
 	def initialize(name, motto)
 		@name = name
 		@motto = motto
-	end 	
+		@members = []
+	end 
+
 
 end 
 #team has many superheroes 
