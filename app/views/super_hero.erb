@@ -1,1 +1,68 @@
+<h1>Create a Team and Heroes!</h1>
 
+<form method="POST" action="/teams">
+        <p>
+          <label for="team_name">Team Name:</label>
+          <input type="text" id="team_name" name='team[name]'></input>
+        </p>
+        <p>
+          <label for="team_motto">Team Motto:</label>
+          <input type="text" id="team_motto" name='team[motto]'></input>
+        </p>
+  <h2>Hero 1</h2>
+        <p>
+          <label for="member1_name">Hero's Name:</label>
+          <input type="text" id="member1_name" name='team[members][][name]'></input>  <!-- the blank array allows our code to say that a team can have an array of heroes each with a name. The array allows us to have multiple heros without confusing the repeated name= because sinatra can distinguish between team[members][0] and team[members][1]-->
+        </p>
+        <p>
+          <label for="member1_power">Hero's Power:</label>
+          <input type="text" id="member1_power" name='team[members][][power]'></input>
+        </p>
+        <p>
+          <label for="member1_bio">Hero's Biography:</label>
+          <input type="text" id="member1_bio" name='team[members][][bio]'></input>
+        </p>
+
+    <h2>Hero 2</h2>
+        <p>
+          <label for="member2_name">Hero's Name:</label>
+          <input type="text" id="member2_name" name='team[members][][name]'></input>  <!-- the blank array allows our code to say that a team can have an array of heroes each with a name. The array allows us to have multiple heros without confusing the repeated name= because sinatra can distinguish between team[members][0] and team[members][1]-->
+        </p>
+        <p>
+          <label for="member2_power">Hero's Power:</label>
+          <input type="text" id="member2_power" name='team[members][][power]'></input>
+        </p>
+        <p>
+          <label for="member2_bio">Hero's Biography:</label>
+          <input type="text" id="member2_bio" name='team[members][][bio]'></input>
+        </p>
+    <h2>Hero 3</h2>
+        <p>
+          <label for="member3_name">Hero's Name:</label>
+          <input type="text" id="member3_name" name='team[members][][name]'></input>  <!-- the blank array allows our code to say that a team can have an array of heroes each with a name. The array allows us to have multiple heros without confusing the repeated name= because sinatra can distinguish between team[members][0] and team[members][1]-->
+        </p>
+        <p>
+          <label for="member3_power">Hero's Power:</label>
+          <input type="text" id="member3_power" name='team[members][][power]'></input>
+        </p>
+        <p>
+          <label for="member3_bio">Hero's Biography:</label>
+          <input type="text" id="member3_bio" name='team[members][][bio]'></input>
+        </p>
+    <p><button type="submit" value="submit">Submit</p> <!--capybara reuires this style of button
+            if not using capybara you could have used          <input type="submit">
+      -->
+</form>
+
+
+
+<!-- the above form yields the following params when using binding.pry in the post controller
+[1] pry(#<App>)> params
+=> {"team"=>
+  {"name"=>"Super Friends",
+   "motto"=>"Yipee",
+   "members"=>
+    [{"name"=>"Steve", "power"=>"Being Steve", "bio"=>"Born Steve"},
+     {"name"=>"Scott Calvin", "power"=>"Selling Toys", "bio"=>"The Santa Clause"},
+     {"name"=>"Jim", "power"=>"Selling printer Paper", "bio"=>"dead end job"}]}}
+-->
