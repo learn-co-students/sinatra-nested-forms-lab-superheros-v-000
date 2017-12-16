@@ -1,3 +1,9 @@
+<h1><%= @t[:name] %></h1>
 
+<h2>Team Motto: <%= @t[:motto] %></h2>
 
-
+<% @t[:members].each do |m| %>
+  <h2>Hero Name: <%= m[:name] %></h2>
+  <p>Hero Power: <%= m[:power] %></p>
+  <p>Hero Biography: <%= m[:bio] %></p>
+<% end %>
