@@ -1,0 +1,10 @@
+
+  <h1><%=@team.name%></h1><br>
+  <h2>Team Motto: <%=@team.motto%></h2><br>
+
+  <%@super_heros.each do |members|%>
+    <h1>Hero Name: <%=member.name%></h1><br>
+    <p>Hero Power:<%=member.power%></p><br>
+    <p>Hero Biography:<%=member.biography%></p>
+      <div><br>
+        <%end%>
