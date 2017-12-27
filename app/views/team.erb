@@ -1,9 +1,13 @@
+ <div class = "team">
 
-  <h1><%=@team.name%></h1><br>
+  <h1>Name: <%=@team.name%></h1><br>
   <h2>Team Motto: <%=@team.motto%></h2><br>
+  <div><br>
+
 
   <%@super_heros.each do |member_detail|%>
-    <h1>Hero Name: <%=member_detail.name%></h1><br>
+   <div class = "super_hero">
+    <p>Hero Name: <%=member_detail.name%></p><br>
     <p>Hero Power:<%=member_detail.power%></p><br>
     <p>Hero Biography:<%=member_detail.biography%></p>
       <div><br>
