@@ -1,3 +1,4 @@
+require 'pry'
 require 'sinatra/base'
 
 class App < Sinatra::Base
@@ -9,24 +10,17 @@ class App < Sinatra::Base
     end
 
 get '/teams' do
-  erb :'super_hero'
+  erb :'/team'
 end
 
 post '/teams' do
   @team = Team.new(params[:team])
-  params[:team][:super_heroes].each do |details|
+  #  binding.pry
+  params[:team][:members].each do |details|
+# binding.pry
     SuperHero.new(details)
   end
-  @super_heroes = Super_hero.all
+  @super_heroes = SuperHero.all
   erb :'/team'
 end
 end
-
-# <% @team_members.each.with_index do |hero, index| %>
-#   <h2>Hero Name: <%= @hero_name[index] %></h2>
-#   <p>
-#     Hero power: <%= @hero_power[index] %>
-#     <br>
-#     Hero biography: <%= @hero_bio[index] %>
-#   </p>
-# <% end %>

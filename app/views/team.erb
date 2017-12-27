@@ -5,10 +5,12 @@
   <div><br>
 
 
-  <%@super_heros.each do |member_detail|%>
-   <div class = "super_hero">
-    <p>Hero Name: <%=member_detail.name%></p><br>
-    <p>Hero Power:<%=member_detail.power%></p><br>
-    <p>Hero Biography:<%=member_detail.biography%></p>
-      <div><br>
+  <%@super_heroes.each do |member_detail|%>
+
+    <h2>Hero Name: <%=member_detail.name%></h2>
+    <p>
+      Hero Power: <%=member_detail.power%>
+      <br>
+      Hero Biography: <%=member_detail.bio%>
+      </p>
         <%end%>

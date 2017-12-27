@@ -1,15 +1,19 @@
 class SuperHero
   attr_accessor :name, :power, :bio
-   MEMBER= []
+   @@all= []
 
   def initialize(params)
     @name = params[:name]
     @power = params[:power]
     @bio = params[:bio]
-    MEMBER << self
+    self.save
+  end
+
+  def save
+    @@all<<self
   end
 
   def self.all
-    MEMBER
+    @@all
 end
 end
