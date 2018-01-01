@@ -1,1 +1,22 @@
+<form action="/team" method="POST">
+  <h2>Create a Team and Heroes!</h2>
+  <label for="team_name">Name</label>
+  <input id="team_name" type="text" name="team[name]"><br>
+  <label for="team_motto">Motto</label>
+  <input id="team_motto" type="text" name="team[motto]"><br>
 
+  <label for="member1_name">Member 1 Name</label>
+  <input id="member1_name" type="text" name="team[member][][name]">
+  <label for="member1_power">Member 1 Power</label>
+  <input id="member1_power" type="text" name=team[member][][power]>
+  <label for="member1_bio">Member 1 Bio</label>
+  <input id="member2_name" type="text" name=team[member][][name>
+  <label for="member2_name">Member 2 Name</label>
+
+
+</form>
+
+<!-- Create a route that responds to a GET request at `/`.
+2. Create a view with a form and render it in the GET `/` route.
+3. The form should have fields for the `name` of a superhero team and their `motto`.
+4. There should be form inputs for each of the three superhero member's `name`, `power`, and `bio`. -->
