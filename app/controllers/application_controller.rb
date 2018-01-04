@@ -1,4 +1,3 @@
-
 require 'sinatra/base'
 
 class App < Sinatra::Base
@@ -17,17 +16,13 @@ set :views, Proc.new { File.join(root, "../views/") }
       @hero_bio = []
       @team_members = params[:team][:members]
       @team_members.each_with_index do |hero, index|
+      @team_members.each do |hero|
         @hero_name << hero[:name]
         @hero_power << hero[:power]
         @hero_bio << hero[:bio]
       end
-
-      # @members = params[:team][:members]
-      # @super_heroes = members.collect do |member_params|
-      #   SuperHero.new({name: member_params[:name], power: member_params[:power], bio: member_params[:bio]})
-      # end
-        binding.pry
-
       erb :team
+binding.pry
       end
     end
+  end
