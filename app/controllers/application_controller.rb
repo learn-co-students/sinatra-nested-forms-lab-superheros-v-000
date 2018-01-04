@@ -22,7 +22,7 @@ set :views, Proc.new { File.join(root, "../views/") }
         @hero_bio << hero[:bio]
       end
       erb :team
-binding.pry
+
       end
     end
   end
