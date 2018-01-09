@@ -18,17 +18,17 @@
     <legend>Hero <%= i+1%></legend>
     <p>
       <label for="team[heroes][][name]">Hero's Name: </label>
-      <input type="text" name="team[heroes][][name]" id="hero_name_<%=i+1%>"> 
+      <input type="text" name="team[heroes][][name]" id="member<%=i+1%>_name"> 
     </p>
     
     <p>
       <label for="team[heroes][][power]">Hero's Power: </label>
-      <input type="text" name="team[heroes][][power]" id="hero_power_<%=i+1%>">
+      <input type="text" name="team[heroes][][power]" id="member<%=i+1%>_power">
     </p>
     
     <p>
       <label for="team[heroes][][biography]">Hero's Biography: </label> 
-      <input type="text" name="team[heroes][][biography]" id="hero_biography_<%=i+1%>">
+      <input type="text" name="team[heroes][][biography]" id="member<%=i+1%>_bio">
     </p>
   </fieldset>
 <% end %>
