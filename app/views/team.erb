@@ -1,3 +1,24 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>Superhero and Team Registry</title>
+ </head>
+ <body>
+<div class = "team_info">
+  <h1>Team <%= params[:team][:name] %></h1>
+  <p>Team Motto: <%= params[:team][:motto] %></p>
+</div>
 
+<% i = 0 %>
+<% while i < params[:team][:members].length %>
+  <div class = "super_hero_info">
+    <h1>Hero Name: <%= params[:team][:members][i][:name] %></h1>
+    <p>Hero Power: <%= params[:team][:members][i][:power] %></p>
+    <p>Hero Biography: <%= params[:team][:members][i][:biography] %></p>
+    <% i += 1 %>
+  </div>
+<% end %>
 
-
+</body>
+</html>
