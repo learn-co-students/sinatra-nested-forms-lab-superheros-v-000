@@ -1,1 +1,22 @@
-
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Create your team!</title>
+</head>
+<body>
+  <h1>Create a Team and Heroes!</h1>
+  <form action="/team" method="post">
+    <p>Team Name: <input type="text" name="team[name]"></p>
+    <p>Team Motto: <input type="text" name="team[motto]"></p>
+    <% 3.times do |n| %>
+      <h2>Hero <%= n + 1 %></h2>
+      <p>Hero's Name: <input id="member<%= n + 1 %>_name" type="text" name="team[members][][name]"></p>
+      <p>Hero's Power: <input id="member<%= n + 1 %>_power" type="text" name="team[members][][power]"></p>
+      <p>Hero's Biography: <input id="member<%= n + 1 %>_bio" type="text" name="team[members][][bio]"></p>
+    <% end %>
+    <input type="submit" value="submit">
+  </form>
+</body>
+</html>
