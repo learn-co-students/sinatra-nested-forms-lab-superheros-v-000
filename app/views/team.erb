@@ -1,3 +1,28 @@
+<div class="team">
+  <h1><%= @team.name %></h1>
+  <h3>Team Motto: <%= @team.motto %></h3>
+</div>
 
+<% @members.each do |member| %>
+  <div class="member">
+    <h3>Hero Name: <%= member.name %></h3>
+    <p>Hero power: <%= member.power %></p>
+    <p>Hero biography: <%= member.bio %></p>
+  </div>
+<% end %>
+
+
+<!-- Solution provided -->
+<!-- <h1><%= @team_name %></h1>
+<h2>Team Motto: <%= @team_motto %></h2>
+
+<% @team_members.each.with_index do |hero, index| %>
+  <h2>Hero Name: <%= @hero_name[index] %></h2>
+  <p>
+    Hero power: <%= @hero_power[index] %>
+    <br>
+    Hero biography: <%= @hero_bio[index] %>
+  </p>
+<% end %> -->
 
 
