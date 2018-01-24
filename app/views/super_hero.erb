@@ -1,1 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    h1 {
+      text-align: center;
+    }
+    input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
 
+  input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  input[type=submit]:hover {
+    background-color: #45a049;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  div {
+    border-radius: 5px;
+    background-color: #f3f3f3;
+    padding: 20px;
+  }
+  </style>
+  <meta charset="UTF-8">
+  <title>Superhero form</title>
+</head>
+<body>
+  <h1>Create a Team and Heroes!</h1>
+  <div>
+    <form action="/teams" method="POST">
+      <label for="team_name">Team Name:</label><br>
+      <input type="text" name="team[name]" /><br>
+      <label for="team_motto">Team Motto:</label><br>
+      <input type="text" name="team[motto]" /><br>
+
+      <h2>Hero 1</h2>
+      <label for="member1_name">Hero's Name:</label><br>
+      <input type="text" id="member1_name" name="team[members][][name]" /><br>
+      <label for="member1_power">Hero's Power:</label><br>
+      <input type="text" id="member1_power" name="team[members][][power]" /><br>
+      <label for="member1_bio">Hero's Biography:</label><br>
+      <input type="text" id="member1_bio" name="team[members][][bio]" /><br><br>
+
+      <h2>Hero 2</h2>
+      <label for="member2_name">Hero's Name:</label><br>
+      <input type="text" id="member2_name" name="team[members][][name]" /><br>
+      <label for="member2_power">Hero's Power:</label><br>
+      <input type="text" id="member2_power" name="team[members][][power]" /><br>
+      <label for="member2_bio">Hero's Biography:</label><br>
+      <input type="text" id="member2_bio" name="team[members][][bio]" /><br><br>
+
+      <h2>Hero 3</h2>
+      <label for="member3_name">Hero's Name:</label><br>
+      <input type="text" id="member3_name" name="team[members[][name]" /><br>
+      <label for="member3_power">Hero's Power:</label><br>
+      <input type="text" id="member3_power" name="team[members][][power]" /><br>
+      <label for="member3_bio">Hero's Biography:</label><br>
+      <input type="text" id="member3_bio" name="team[members][][bio]" /><br><br>
+      <button type="submit" value="submit">Submit</button>
+    </form>
+  </div>
+
+</body>
+</html>
