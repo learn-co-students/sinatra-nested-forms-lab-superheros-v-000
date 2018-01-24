@@ -1,1 +1,63 @@
+<% ids = ["team_name", "team_motto", "hero_name_", "hero_power_", "hero_biography_"] %>
+<% names = ["team[name]", "team[motto]", "hero[name]", "hero[power]", "hero[biography]"]  %>
 
+<% team_attributes = ["name", "motto"] %>
+<% hero_attributes = ["name", "power", "bio"] %>
+
+<% number_of_heroes = 3 %>
+
+<% team_ids = [] %>
+<% team_names = [] %>
+<% team_labels = [] %>
+<% team_attributes.each do |atr| %>
+  <% team_ids << "team_#{atr}" %>
+  <% team_names << "team[#{atr}]" %>
+  <% team_labels << "Team #{atr.capitalize}: " %>
+<% end %>
+
+<% hero_ids = [] %>
+<% hero_names = [] %>
+<% hero_labels = [] %>
+<% hero_attributes.each do |atr| %>
+  <% hero_ids << "member_#{atr}" %>
+  <% hero_names << "team[heroes][][#{atr}]" %>
+  <% hero_labels << "Hero #{atr.capitalize}: " %>
+<% end %>
+
+<h1>Create a Team and Heroes!</h1>
+<form action='/teams' method='POST'>
+<% team_ids.each_with_index do |id, key| %>
+  <p>
+    <label for='<%= id %>'><%= team_labels[key] %></label>
+    <input type='text' id='<%= id %>' name='<%= team_names[key] %>'>
+  </p>
+<% end %>
+<% number_of_heroes.times do |num| %>
+  <% hero_num = (num+1).to_s %>
+  <h2>Hero <%= hero_num %></h2>
+  <% hero_ids.each_with_index do |id, key| %>
+    <p>
+      <label for='<%= "#{id[0..5]}#{hero_num}#{id[6..-1]}" %>'><%= hero_labels[key] %></label>
+      <input type='text' id='<%= "#{id[0..5]}#{hero_num}#{id[6..-1]}" %>' name='<%= hero_names[key] %>'>
+    </p>
+  <% end %>
+<% end %>
+<input type='submit' value='submit'>
+</form>
+
+
+
+
+
+
+
+<!-- <form action='/teams' method='POST'>
+  <p>
+    <label for='team_name'>Team Name: </label>
+    <input type='text' id='team_name' name='team[name]'>
+  </p>
+  <p>
+    <label for='team_name'>Team Name: </label>
+    <input type='text' id='team_name' name='team[name]'>
+  </p>
+</form> -->
