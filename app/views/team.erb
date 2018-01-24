@@ -1,3 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+ <h2>Team Name: <%= @team.name %></h2>
 
+ <h2>Team Motto: <%= @team.motto %></h2>
+
+ <% @hero.each do |val| %>
+    <p>Hero Name: <%=  val.name %></p><br>
+   <p>Hero power: <%= val.power %></p><br>
+    <p>Hero biography: <%=  val.bio %></p><br>
+
+ <%end %>
+
+
+</body>
+</html>
 
 
