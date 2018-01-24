@@ -1,3 +1,12 @@
 
+<h1><%= @team_name %></h1>
+<h2>Team Motto: <%= @team_motto %></h2>
+<% i = 0 %>
+<% @count.times do %>
 
-
+<h2>Hero Name: <%= @heroes[i][:name] %></h2>
+<h3>Hero Power: <%= @heroes[i][:power] %></h3>
+<h3>Hero Biography: <%= @heroes[i][:biography] %></h3>
+<% i +=1 %>
+<br>
+<% end%>
