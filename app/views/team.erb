@@ -1,3 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Make a super-hero team!</title>
+    </head>
+    <body>
+        <h1>Team Info:</h1><br />
+        <h3>Team Name: <%= @team.name %></h3><br />
+        <h4>Team Motto: <%= @team.motto %></h4><br /><br />
+        
+        <h1>Heroes</h1>
+            <% @members.each do |member| %>
+                <h4>Hero Name: <%= member.name %></h4>
+                <h4>Hero power: <%= member.power %></h4>
+                <h4>Hero biography: <%= member.bio %></h4>
+            <% end %>
+    </body>
 
-
-
+</html>
