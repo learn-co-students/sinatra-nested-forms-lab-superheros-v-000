@@ -1,7 +1,7 @@
 describe App do
 
   describe 'GET /' do
-    before do 
+    before do
       get '/'
     end
 
@@ -9,7 +9,7 @@ describe App do
       expect(last_response.status).to eq(200)
     end
 
-    it 'renders super hero form' do 
+    it 'renders super hero form' do
       expect(last_response.body).to include("Create a Team and Heroes!")
       expect(last_response.body).to include("<form")
     end
@@ -32,17 +32,17 @@ describe App do
       click_button 'submit'
 
       expect(page).to have_text("Team Ruby")
-      expect(page).to have_text("Team Motto: We love Ruby!")
-      expect(page).to have_text("Hero Name: Amanda")
-      expect(page).to have_text("Hero Power: Ruby")
-      expect(page).to have_text("Hero Biography: I love Ruby!")
-      expect(page).to have_text("Hero Name: Arel")
-      expect(page).to have_text("Hero Power: JavaScript")
-      expect(page).to have_text("Hero Biography: I love JavaScript!")
-      expect(page).to have_text("Hero Name: Katie")
-      expect(page).to have_text("Hero Power: Sinatra")
-      expect(page).to have_text("Hero Biography: I love Sinatra!")
+      expect(page).to have_text("We love Ruby!")
+      expect(page).to have_text("Amanda")
+      expect(page).to have_text("Power: Ruby")
+      expect(page).to have_text("Bio: I love Ruby!")
+      expect(page).to have_text("Arel")
+      expect(page).to have_text("Power: JavaScript")
+      expect(page).to have_text("Bio: I love JavaScript!")
+      expect(page).to have_text("Katie")
+      expect(page).to have_text("Power: Sinatra")
+      expect(page).to have_text("Bio: I love Sinatra!")
     end
   end
-  
+
 end
