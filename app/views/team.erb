@@ -1,3 +1,19 @@
-
-
-
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Team!</title>
+  </head>
+  <body>
+    <h1>Team Name: <%= @team[:name] %></h1>
+    <h1>Team Motto: <%= @team[:motto] %></h1>
+    <br>
+    <h2>Members:</h2>
+    <% @team[:members].each do |el|%>
+    <h3>Hero Name: <%= el[:name] %></h3>
+    <h3>Hero Power: <%= el[:power] %></h3>
+    <h3>Hero Biography: <%= el[:bio] %></h3>
+    <br>
+    <% end %>
+  </body>
+</html>
