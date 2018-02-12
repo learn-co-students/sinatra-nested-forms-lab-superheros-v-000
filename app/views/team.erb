@@ -1,3 +1,9 @@
+<h2> Team <%= params[:team][:name] %></h2>
+<p> Team Motto: <%= params[:team][:motto] %></p>
+<p> Team Motto: <%= params[:team][:motto] %></p>
 
-
-
+<%params[:team][:heroes].each do |hero_info|%>
+  <p> Hero Name: <%=hero_info[:name] %></p>
+  <p> Hero Power: <%=hero_info[:power] %></p>
+  <p> Hero Biography: <%=hero_info[:biography] %></p>
+<%end%>
