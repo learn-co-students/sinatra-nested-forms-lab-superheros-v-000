@@ -2,4 +2,16 @@
 
 <form method = "POST" action = '/teams'>
 
+<label for = "name"> Team Name: </label>
+<input type = "text" id = "name" name = "team[name]"><br>
+<label for = "motto"> Team Motto: </label>
+<input type = "text" id = "motto" name = "team[motto]"><br><br>
+
+<h2> Hero 1</h2>
+<label for = "name"> Hero's Name: </label>
+<input type = "text" id = "hero_name_1" name = "team[heros][][name]"><br>
+
+
+
+<input type = "submit" value = "Submit">
 </form>
