@@ -3,12 +3,16 @@ source "https://rubygems.org"
 
 # gem "rails"
 
-gem 'sinatra', '1.4.3'
-gem 'rake', '10.4.2'
-gem 'thin', '1.6.4'
-gem 'shotgun', '0.9'
-gem 'pry', '0.10.3'
-gem 'require_all', '1.3.2'
+gem 'sinatra', require: 'sinatra/base'
+gem 'sinatra-reloader', require: false
+gem 'activerecord', :require => 'active_record'
+gem 'sinatra-activerecord', :require => 'sinatra/activerecord'
+gem 'rake'
+gem 'shotgun'
+gem 'pry'
+gem 'tux'
+gem 'require_all'
+gem 'sqlite3'
 
 group :test do
   gem 'rspec', '3.3.0'
