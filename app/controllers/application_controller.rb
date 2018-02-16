@@ -11,6 +11,7 @@ class App < Sinatra::Base
     post '/teams' do
       @team = params[:team][:name]
       @motto = params[:team][:motto]
+      @hero_info = params[:team][:members].map{|h| h.values}
       erb :team
     end
 
