@@ -1,2 +1,14 @@
 
-<h1> made it to the teams page </h1>
+<h1> <%= @team.name %> </h1>
+
+
+<h2> Heroes </h2>
+<ul>
+  <% @team.heroes.each_with_index do |hero, i| %>
+    <li><%= index + 1 %></li>
+
+    <li><%= hero.name %></li>
+    <li><%= hero.power %></li>
+    <li><%= hero.bio %></li>
+  <% end %>
+</ul>
