@@ -1,7 +1,7 @@
 # A sample Gemfile
 source "https://rubygems.org"
 
-# gem "rails"
+gem "rails"
 
 gem 'sinatra', require: 'sinatra/base'
 gem 'sinatra-reloader', require: false

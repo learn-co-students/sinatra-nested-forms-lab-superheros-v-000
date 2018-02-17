@@ -5,22 +5,17 @@ class App < Sinatra::Base
     set :views, Proc.new { File.join(root, "../views/") }
 
     get '/' do
-      erb :index
-    end
-
-    get '/super_hero/:id' do
-      @team = Team.find(params[:id])
-
       erb :super_hero
     end
 
     post '/teams' do
       binding.pry
-      team = Team.new(name: params[:team][:name], motto: params[:team][:motto])
+      @team = Team.new(name: params[:team][:name], motto: params[:team][:motto])
 
-      params[:team][:heroes].each do |hero_data|
-        hero = Hero.create(hero_data)
-        hero.team = team
+      members = params[:team][:members]
+
+      @super_heroes = members.collect do |hero_data|
+        SuperHero.new({name: hero_data[:name], power: hero_data[:power], bio: hero_data[:bio]})
       end
       erb :team
     end

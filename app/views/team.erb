@@ -1,14 +1,9 @@
+<h1>Team Name:</h1> <%= @team.name %>
+<h2>Team Motto:</h2> <%= @team.motto %>
 
-<h1> <%= @team.name %> </h1>
-
-
-<h2> Heroes </h2>
-<ul>
-  <% @team.heroes.each_with_index do |hero, i| %>
-    <li><%= index + 1 %></li>
-
-    <li><%= hero.name %></li>
-    <li><%= hero.power %></li>
-    <li><%= hero.bio %></li>
-  <% end %>
-</ul>
+<h1>Heroes</h1>
+<% @super_heroes.each do |hero| %>
+  <p>Hero Name: <%= hero.name %></p>
+  <p>Hero Power: <%= hero.power %></p>
+  <p>Hero Biography: <%= hero.bio %></p>
+<% end %>

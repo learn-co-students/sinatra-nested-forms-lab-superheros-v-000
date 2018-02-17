@@ -1,14 +1,22 @@
+<h2>Create a Team and Heroes!</h2>
+<form method="POST" action="/teams">
+  Team Name: <input type="text" name="team[name]"><br />
+  Team Motto: <input type="text" name="team[motto]"><br />
 
-<h1> <%= @team.name %> </h1>
+  <h3>Hero 1</h3>
+  Hero's Name: <input type="text" id="member1_name" name="team[members][][name]"><br />
+  Hero's Power: <input type="text" id="member1_power" name="team[members][][power]"><br />
+  Hero's Bio: <input type="text" id="member1_bio" name="team[members][][bio]"><br />
 
+  <h3>Hero 2</h3>
+  Hero's Name: <input type="text" id="member2_name" name="team[members][][name]"><br />
+  Hero's Power:<input type="text" id="member2_power" name="team[members][][power]"><br />
+  Hero's Bio: <input type="text" id="member2_bio" name="team[members][][bio]"><br />
 
-<h2> Heroes </h2>
-<ul>
-  <% @team.heroes.each_with_index do |hero, i| %>
-    <li><%= index + 1 %></li>
+  <h3>Hero 3</h3>
+  Hero's Name: <input type="text" id="member3_name" name="team[members][][name]"><br />
+  Hero's Power:<input type="text" id="member3_power" name="team[members][][power]"><br />
+  Hero's Bio: <input type="text" id="member3_bio" name="team[members][][bio]"><br />
 
-    <li><%= hero.name %></li>
-    <li><%= hero.power %></li>
-    <li><%= hero.bio %></li>
-  <% end %>
-</ul>
+  <button id="submit" type="submit">Submit</button>
+</form>
