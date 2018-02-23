@@ -12,7 +12,7 @@ class App < Sinatra::Base
     @heronames=[] #empty arrays to be filled with params for the 3 heroes
     @heropowers=[]
     @herobios=[]
-    @teamname=params[:team][:name]
+    @teamname=params[:team][:name] #params tags from rspec, have to match
     @teammotto=params[:team][:motto]
 
     @teammembers=params[:team][:members]
