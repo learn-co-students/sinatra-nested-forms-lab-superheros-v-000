@@ -1,5 +1,6 @@
+<!--cutnpaste from my previous, looks like the lesson, nothing fancy, ID taken from rspec -->
 <h1>Create a Team and Heroes!</h1>
-<form>
+<form action='/team' method='post'>
 Team Name: <input type="text" name="team[name]" id="pirate_name"><br>
 Team Motto: <input type="text" name="team[motto]" id="pirate_name"><br>
 <h2>Hero 1</h2><br>
@@ -14,6 +15,5 @@ Hero's Biography: <input type="text" name="team[members][][bio]" id="member2_bio
 Hero's Name: <input type="text" name="team[members][][name]" id="member3_name"><br>
 Hero's Power: <input type="text" name="team[members][][power]" id="member3_power"><br>
 Hero's Biography: <input type="text" name="team[members][][bio]" id="member3_bio"><br>
-<input type="submit" value="Submit"> <!-- value case sensitive for rspec -->
-
+<button type="submit" value="submit">Click to Submit</button> <!-- value case sensitive for rspec, lowercase this time lol, wait needs a button -->
 </form>
