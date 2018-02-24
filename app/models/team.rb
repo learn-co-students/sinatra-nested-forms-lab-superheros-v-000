@@ -1,21 +1,21 @@
 class Team < ActiveRecord::Base
-    has_many :superheroes
+    has_many :superheros
 
-    attr_accessor :name, :motto
-    TEAMS = []
+    # #attr_accessor :name, :motto
+    # TEAMS = []
 
-    def initialize(params)
-        @name = params[:name]
-        @motto = params[:motto]
-        TEAMS << self
-    end
+    #def initialize(params)
+        #@name = params[:name]
+       # @motto = params[:motto]
+        #TEAMS << self
+    #end
 
-    def self.all
-        TEAMS
-    end
+    # def self.all
+    #     TEAMS
+    # end
 
-    def self.clear
-        TEAMS.clear
-    end
+    # def self.clear
+    #     TEAMS.clear
+    # end
     
 end

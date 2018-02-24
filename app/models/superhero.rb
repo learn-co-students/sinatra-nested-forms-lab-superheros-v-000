@@ -1,23 +1,23 @@
-class SuperHero < ActiveRecord::Base
+class Superhero < ActiveRecord::Base
     belongs_to :team
 
-    attr_accessor :name, :power, :bio
-    SUPERHEROES = []
+    # attr_accessor :name, :power, :bio
+    # SUPERHEROES = []
 
-    def initialize(params)
-        @name = params[:name]
-        @power = params[:power]
-        @bio = params[:bio]
+    # def initialize(params)
+    #     @name = params[:name]
+    #     @power = params[:power]
+    #     @bio = params[:bio]
 
-        SUPERHEROES << self
-    end
+    #     SUPERHEROES << self
+    # end
 
-    def self.all
-        SUPERHEROES
-    end
+    # def self.all
+    #     SUPERHEROES
+    # end
 
-    def self.clear
-        SUPERHEROES.clear
-    end
+    # def self.clear
+    #     SUPERHEROES.clear
+    # end
     
 end
