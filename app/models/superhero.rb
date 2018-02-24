@@ -1,4 +1,5 @@
-class SuperHero 
+class SuperHero < ActiveRecord::Base
+    belongs_to :team
 
     attr_accessor :name, :power, :bio
     SUPERHEROES = []
