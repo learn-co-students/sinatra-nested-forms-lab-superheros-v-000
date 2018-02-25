@@ -1,9 +1,10 @@
+require 'spec_helper'
+
 describe "App" do
 
-  describe "GET '/'" do
-    before (:each) do
-      get '/'
-    end
+    describe 'GET /' do
+      before do
+        get '/'
 
         it "returns a 200 status code" do
           expect(last_response.status).to eq(200)
@@ -14,10 +15,13 @@ describe "App" do
       expect(last_response.body).to include("<form")
     end
 
-  end
 
-  describe 'POST /teams' do
-    it 'submits the form' do
+  end
+end
+
+  describe 'POST /team' do
+
+     it 'submits the form' do
       visit '/'
       fill_in("team[name]", :with => "Team Ruby")
       fill_in("team[motto]", :with => "We love Ruby!")
@@ -46,20 +50,4 @@ describe "App" do
     end
   end
 
-  # describe "FormsLab::App" do
-  #   describe "GET '/'" do
-  #     before(:each) do
-  #       get '/'
-  #     end
-  #
-  #     it "returns a 200 status code" do
-  #       expect(last_response.status).to eq(200)
-  #     end
-  #
-  #     it "renders the instructions" do
-  #       expect(last_response.body).to include("Welcome to the Nested Forms Lab!")
-  #       expect(last_response.body).to include("let's navigate to the '/new'")
-  #     end
-  #   end
-
-end
+  end
