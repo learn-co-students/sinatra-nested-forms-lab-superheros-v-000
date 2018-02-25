@@ -1,18 +1,19 @@
-describe App do
+describe "App" do
 
-  describe 'GET /' do
-    before do 
+  describe "GET '/'" do
+    before (:each) do
       get '/'
     end
 
-    it 'sends a 200 status code' do
-      expect(last_response.status).to eq(200)
-    end
+        it "returns a 200 status code" do
+          expect(last_response.status).to eq(200)
+        end
 
-    it 'renders super hero form' do 
+    it 'renders super hero form' do
       expect(last_response.body).to include("Create a Team and Heroes!")
       expect(last_response.body).to include("<form")
     end
+
   end
 
   describe 'POST /teams' do
@@ -44,5 +45,21 @@ describe App do
       expect(page).to have_text("Hero Biography: I love Sinatra!")
     end
   end
-  
+
+  # describe "FormsLab::App" do
+  #   describe "GET '/'" do
+  #     before(:each) do
+  #       get '/'
+  #     end
+  #
+  #     it "returns a 200 status code" do
+  #       expect(last_response.status).to eq(200)
+  #     end
+  #
+  #     it "renders the instructions" do
+  #       expect(last_response.body).to include("Welcome to the Nested Forms Lab!")
+  #       expect(last_response.body).to include("let's navigate to the '/new'")
+  #     end
+  #   end
+
 end

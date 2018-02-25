@@ -1,3 +1,17 @@
-
-
-
+<!doctype = HTML>
+<html>
+<header>
+  <title>Team Data</title>
+</header>
+<body>
+<h1><%=@new_team.name%></h1>
+<h2>Team Motto: <%=@new_team.motto%></h2>
+<%@heros.each do |hero|%>
+<div class = "hero">
+  <h3>Name: <%= hero.name %></h3>
+  <p>Power: <%= hero.power %></p>
+  <p>Biography: <%= hero.bio %></p>
+</div><br>
+<%end%>
+</body>
+</html>
