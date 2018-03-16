@@ -1,6 +1,6 @@
 require 'sinatra/base'
-# require_relative '../models/member.rb'
-# require_relative '../models/team.rb'
+require_relative '../models/member.rb'
+require_relative '../models/team.rb'
 
 class App < Sinatra::Base
 
@@ -16,17 +16,14 @@ class App < Sinatra::Base
 
   post '/teams' do
 
-    # @team = Team.new(params[:team])
-    #
-    # params[:team][:members].each do |attribute|
-    #   Member.new(attribute)
-    #   @name = attribute[:name]
-    #   @power = attribute[:power]
-    #   @biography = attribute[:biography]
-    # end
-    #
-    # @members = Member.all
-    #
+    @team = Team.new(params[:team])
+
+    params[:team][:members].collect do |hash|
+      Member.new(hash)
+    end
+
+    @members = Member.all
+
     erb :team
   end
 end
