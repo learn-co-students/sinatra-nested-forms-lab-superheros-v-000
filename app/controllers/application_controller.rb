@@ -12,7 +12,9 @@ class App < Sinatra::Base
     post '/teams' do
       #shows to data
       #instantiates instance variables and creates objects
-      @team = Team.new(params)
+      @team_name = params[:team][:name]
+      @team_motto = params[:team][:motto]
+
 
 
       params[:team][:heroes].each do |details|
@@ -20,7 +22,6 @@ class App < Sinatra::Base
       end
 
       @heroes = Hero.all
-      #binding.pry
       erb :team
     end
 
