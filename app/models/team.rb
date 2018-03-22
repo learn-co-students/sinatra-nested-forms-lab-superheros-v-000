@@ -3,10 +3,12 @@ class Team
 
   @@teams = []
 
-  def initalize(params)
+  def initialize(params)
+    binding.pry
     @name = params[:name]
     @motto = params[:motto]
     @@teams << self
+    binding.pry
   end
 
   def self.all

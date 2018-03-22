@@ -1,4 +1,5 @@
 require 'sinatra/base'
+require 'pry'
 
 class App < Sinatra::Base
 
@@ -13,12 +14,13 @@ class App < Sinatra::Base
       #instantiates instance variables and creates objects
       @team = Team.new(params)
 
+
       params[:team][:heroes].each do |details|
         Hero.new(details)
       end
 
       @heroes = Hero.all
-      binding.pry
+      #binding.pry
       erb :team
     end
 
