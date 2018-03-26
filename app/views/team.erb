@@ -5,7 +5,6 @@
 </head>
 
 <body>
-  <form method="post" action="/teams">
     <h1> Create a Team and Heroes! </h1>
     <p>Team Name: <%= "#{params[:team][:name]}" %></p>
     <p>Team Motto: <%= "#{params[:team][:motto]}" %> </p>
@@ -24,6 +23,5 @@
     <p>Hero's Name: <%= @hero3.name %> </p>
     <p>Hero's Power: <%= @hero3.power %> </p>
     <p>Hero's Biography: <%= @hero3.bio %> </p>
-  </form>
 </body>
 </html>

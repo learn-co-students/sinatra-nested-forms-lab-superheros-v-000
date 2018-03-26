@@ -1,13 +1,13 @@
 class Hero
 
-  attr_accessor :name, :power, :biography
+  attr_accessor :name, :power, :bio
 
   @@heroes = []
 
-  def initialize(name, power, biography)
+  def initialize(name, power, bio)
     @name=name
     @power=power
-    @biography=biography
+    @bio=bio
     @@heroes << self
   end
 
