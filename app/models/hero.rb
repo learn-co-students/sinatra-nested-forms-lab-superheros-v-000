@@ -1,4 +1,4 @@
-class Hero < Sinatra::Base
+class Hero
 
   attr_accessor :name, :power, :biography
 
