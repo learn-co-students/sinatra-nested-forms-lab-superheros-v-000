@@ -1,3 +1,29 @@
+<!DOCTYPE html>
 
+<html>
+<head>
+</head>
 
+<body>
+  <form method="post" action="/teams">
+    <h1> Create a Team and Heroes! </h1>
+    <p>Team Name: <%= "#{params[:team][:name]}" %></p>
+    <p>Team Motto: <%= "#{params[:team][:motto]}" %> </p>
 
+    <h2>Hero 1 </h2>
+    <p>Hero's Name: <%= @hero1.name %></p>
+    <p>Hero's Power: <%= @hero1.power %></p>
+    <p>Hero's Biography: <%= @hero1.bio %></p>
+
+    <h2>Hero 2</h2>
+    <p>Hero's Name: <%= @hero2.name %> </p>
+    <p>Hero's Power: <%= @hero2.power %> </p>
+    <p>Hero's Biography: <%= @hero2.bio %></p>
+
+    <h2>Hero 3</h2>
+    <p>Hero's Name: <%= @hero3.name %> </p>
+    <p>Hero's Power: <%= @hero3.power %> </p>
+    <p>Hero's Biography: <%= @hero3.bio %> </p>
+  </form>
+</body>
+</html>
