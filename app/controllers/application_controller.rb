@@ -1,8 +1,17 @@
 require 'sinatra/base'
 
 class App < Sinatra::Base
+ set :views, Proc.new { File.join(root, "../views/") }
+  
+  get '/' do
+   erb :super_hero
+  end
 
-    set :views, Proc.new { File.join(root, "../views/") }
-
-
+  post '/teams' do
+   @team = Team.new(params[:team])
+   params[:team][:members].each{|member|Superhero.new(member)}
+   @members = Superhero.all
+   erb :team
+  end
+  
 end
