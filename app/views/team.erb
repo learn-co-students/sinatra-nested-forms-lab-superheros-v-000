@@ -10,9 +10,12 @@
     <h2> Team Motto: <%= @team.motto %> </h2>
 
     <% Member.all.each do |member| %>
-    <h2>Hero Name: <%= member.name %> </h2>
-    <p>Hero Power: <%= member.power %> </p>
-    <p>Hero Biography: <%= member.biography %> </p>
+      <h2>Hero Name: <%= member.name %> </h2>
+      <p>
+        Hero Power: <%= member.power %>
+        <br>
+        Hero Biography: <%= member.biography %>
+      </p>
     <% end %>
   </body>
 </html>
