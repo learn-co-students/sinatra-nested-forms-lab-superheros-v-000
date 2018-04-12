@@ -1,3 +1,12 @@
+here are the params:
+<%= params %>
+<%= @team.name %>
 
+<h1><%= @team.name %></h1>
+<h2>Team Motto: <%= @team.motto %></h2>
 
-
+<% @heroes.each do |sup|%>
+  <h2>Hero Name: <%= sup.name %> </h2>
+  <p>Hero Power: <%= sup.power %> </p>
+  <p>Hero Biography: <%= sup.bio %> </p>
+<% end %>
