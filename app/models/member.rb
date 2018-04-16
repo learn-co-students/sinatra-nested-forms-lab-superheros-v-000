@@ -9,7 +9,6 @@ class Member
     # binding.pry
     @name=params[:name]
     @power=params[:power]
-    
     @biography=params[:biography]
     
     MEMBERS << self
