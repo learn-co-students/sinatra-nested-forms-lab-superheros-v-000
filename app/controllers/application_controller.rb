@@ -8,13 +8,12 @@ get '/' do
   erb :super_hero
 end
 
-post '/team' do
+post '/teams' do
   @team = Team.new(params[:team])
-binding.pry
      params[:team][:members].each do |details|
        Superhero.new(details)
      end
-     @members = superhero.all
+     @members = Superhero.all
 
   erb :team
 end

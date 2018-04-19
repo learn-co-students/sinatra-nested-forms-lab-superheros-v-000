@@ -2,14 +2,14 @@
 
 <div class="team">
   <h3>Name: <%= @team.name %></h3><br>
-  <h4>Motto: <%= @team.weight %> pounds</h4><br>
+  <h4>Team Motto: <%= @team.motto %></h4><br>
 </div><br>
 
 <h1>Superheros</h1>
-<% @superhero.each do |sh| %>
-  <div class="ship">
-    <p>Name: <%= sh.name %></p><br>
-    <p>Power: <%= sh.power %></p><br>
-    <p>Bio: <%= sh.bio %></p>
+<% @members.each do |sh| %>
+  <div class="members">
+    <p>Hero Name: <%= sh.name %></p><br>
+    <p>Hero Power: <%= sh.power %></p><br>
+    <p>Hero Biography: <%= sh.bio %></p>
   </div><br>
 <% end %>
