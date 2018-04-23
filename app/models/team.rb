@@ -8,6 +8,10 @@ class Team
     TEAMS << self
   end
 
+	def save
+		TEAMS << self
+	end
+
   def self.all
     TEAMS
   end

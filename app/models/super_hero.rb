@@ -1,15 +1,15 @@
-class Member
+class SuperHero
   attr_accessor :name, :power, :bio
-  MEMBERS = []
+  SUPERHEROS = []
   
   def initialize(stats)
     @name = stats[:name]
     @power = stats[:power]
     @bio = stats[:bio]
-    MEMBERS << self
+    SUPERHEROS << self
   end
 
   def self.all
-    MEMBERS
+    SUPERHEROS
   end
 end
