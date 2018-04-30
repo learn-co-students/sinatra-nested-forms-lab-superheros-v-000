@@ -6,12 +6,12 @@
 <body>
 	<h1>Test Page</h1>
 	<h2><%=@team.name %></h2>
-	<h2><%=@team.motto %></h2>
+	<h2>Team Motto: <%=@team.motto %></h2>
 
 	<% @heroes.each do |hero| %>
-	<h2><%=hero.name%></h2>
-	<h2><%=hero.power%></h2>
-	<h2><%=hero.bio%></h2>
+	<h2>Hero Name: <%=hero.name%></h2>
+	<h2>Hero Power: <%=hero.power%></h2>
+	<h2>Hero Biography: <%=hero.bio%></h2>
 	<% end %>
 </body>
 </html>
