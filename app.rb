@@ -1,18 +1,14 @@
-require 'sinatra/base'
+require './config/environment'
 
 class App < Sinatra::Base
 
-  set :views, Proc.new { File.join(root, "../views/") }
-
-  require './config/environment'
-
   get '/' do
-    erb :"super_hero"
+    erb :"views/new"
   end
 
-  # get '/new' do
-  #   erb :"super_hero"
-  # end
+  get '/new' do
+    erb :"views/new"
+  end
 
   post '/teams' do
     # binding.pry
@@ -23,8 +19,7 @@ class App < Sinatra::Base
     end
 
     @members = Superhero.all
-# binding.pry
-    erb :"team"
-  end
 
+    erb :"views/show"
+  end
 end
