@@ -5,30 +5,15 @@
     </head>
     <body>
       <h1><%= @team.name %></h1>
-      <h2><%= @team.motto %></h2>
+      <h2>Team Motto: <%= @team.motto %></h2>
 
       <% @members.each do |hero| %>
         <div class="hero">
           <h2>Hero Name: <%= hero.name %></h2>
-          <p>Hero Power: <%= hero.power %></p><br>
-          <p>Hero Biography: <%= hero.bio %></p><br>
-        </div><br>
+          Hero Power: <%= hero.power %><br>
+          Hero Biography: <%= hero.bio %><br>
+        </div>
       <% end %>
-
-      <h2>Hero Name: <%= @members[0].name %></h2>
-      <div class="hero">
-        <h3>Name: <%= @members[0].name %></h3><br>
-        <h4>Power: <%= @members[0].power %></h4>
-        <h4>Bio: <%= @members[0].bio %></h4>
-      </div><br>
-
-
-      <h2>Display your second ship here</h2>
-      <div class="ship">
-        <h3>Ship 2 Name: <%= @ships[1].name %></h3><br>
-        <h4>Ship 2 Type: <%= @ships[1].type %></h4>
-        <h4>Ship 2 Booty: <%= @ships[1].booty %></h4>
-      </div><br>
 
     </body>
 </html>
