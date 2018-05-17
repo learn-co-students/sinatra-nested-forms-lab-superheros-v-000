@@ -1,1 +1,11 @@
-
+<h1>Team Name:<%= @team[:name] %></h1>
+<h2> Team Motto: <%= @team[:motto]%> </h2><br>
+binding.pry
+<% @team[:super_hero].each_with_index do |hero, index| %>
+    <h2>Hero Name: <%=@team[:super_hero][index][:name] %></h2>
+    <p>
+      Hero Power: <%=@team[:super_hero][index][:power]%>
+      <br>
+      Hero Biography: <%=@team[:super_hero][index][:biography]%>
+    </p>
+<%end%>
