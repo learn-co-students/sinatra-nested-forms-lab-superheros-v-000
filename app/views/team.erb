@@ -1,7 +1,7 @@
 <h1><%= @team.name %></h1>
 <h2>Team Motto: <%= @team.motto %></h2>
 
-<% @super_heros.each do | hero | %>
+<% @team_members.each do | hero | %>
   <h2>Hero Name: <%=hero.name%></h2>
     <ul style="list-style-type: none;">  <!-- style should be moved to css file or use bootstrap class -->
       <li>Hero Power: <%=hero.power%></li>
