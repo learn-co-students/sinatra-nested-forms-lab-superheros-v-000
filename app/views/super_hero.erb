@@ -1,1 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Your Super Hero Teams</title>
+</head>
+<body>
 
+	<h1> <%= @team.name %> </h1>
+	<br>
+
+	<h2>Team Motto: <%=@team.motto %> </h2>
+	<br>
+
+	<h2>Hero Name: <%= @members[0].name %></h2>
+	<br>
+
+	<h3>Hero Power: <%= @members[0].power %></h3>
+	<h3>Hero Biography: <%= @members[0].biography %></h3>
+	<br>
+
+	<h2>Hero Name: <%= @members[1].name %></h2>
+	<br>
+
+	<h3>Hero Power: <%= @members[1].power %></h3>
+	<h3>Hero Biography: <%= @members[1].biography %></h3>
+	<br>
+
+	<h2>Hero Name: <%= @members[2].name %></h2>
+	<br>
+
+	<h3>Hero Power: <%= @members[2].power %></h3>
+	<h3>Hero Biography: <%= @members[2].biography %></h3>
+
+
+</body>
+</html>
