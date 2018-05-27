@@ -1,3 +1,32 @@
-
-
-
+<h1>Flatiron</h1>
+<div class="team">
+  <h3>Team Motto: <%= @team.name%></h3>
+  <h3>Team Motto: <%= @team.motto%></h3>
+</div>
+  <% @heros.each.with_index do |team, index| %>
+<div class="heros">
+    <% if index == 0 %>
+    <h2>Hero Name: <%=team.name%></h2><br>
+    <p>Hero Power: <%=team.power%></p><br>
+    <p>Hero Biography: <%=team.bio%></p><br>
+    <% end %>
+  <% end %>
+</div><br>
+  <% @heros.each.with_index do |team, index| %>
+<div class="heros2">
+    <% if index == 1 %>
+    <h2>Hero Name: <%=team.name%></h2><br>
+    <p>Hero Power: <%=team.power%></p><br>
+    <p>Hero Biography: <%=team.bio%></p><br>
+    <% end %>
+  <% end %>
+</div><br>
+  <% @heros.each.with_index do |team, index| %>
+<div class="heros3">
+    <% if index == 2 %>
+    <h2>Hero Name: <%=team.name%></h2><br>
+    <p>Hero Power: <%=team.power%></p><br>
+    <p>Hero Biography: <%=team.bio%></p><br>
+    <% end %>
+  <% end %>
+</div><br>
