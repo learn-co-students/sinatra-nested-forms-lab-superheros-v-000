@@ -4,10 +4,6 @@ class Team
   def initialize(params)
     @name = params[:team][:name]
     @motto = params[:team][:motto]
-    params[:team][:members].each do |member|
-      Superhero.new(member)
-    end
-    @members = Superhero.all
   end
 
 end
