@@ -7,13 +7,18 @@
  </head>
  <body>
   
-  <h1><%="#{params["team_name"]}" %></h1>
-  <h2><%="Team Motto: #{params["motto"]}" %></h2>
+  <h1><%="#{params["team"]["name"]}" %></h1>
+  <h2><%="Team Motto: #{params["team"]["motto"]}" %></h2>
   <h2><%="Hero Name: #{params["team"]["members"][0]["name"]}" %></h2>
-  <h2><%="Shooting Guard: #{params["sg"]}" %></h2>
-  <h2><%="Small Forward: #{params["sf"]}" %></h2>
-  <h2><%="Power Forward: #{params["pf"]}" %></h2>
-  <h2><%="Center: #{params["c"]}" %></h2>
+  <p><%="Hero Power: #{params["team"]["members"][0]["power"]}" %></p>
+  <p><%="Hero Biography: #{params["team"]["members"][0]["bio"]}" %></p>
+  <h2><%="Hero Name: #{params["team"]["members"][1]["name"]}" %></h2>
+  <p><%="Hero Power: #{params["team"]["members"][1]["power"]}" %></p>
+  <p><%="Hero Biography: #{params["team"]["members"][1]["bio"]}" %></p>
+  <h2><%="Hero Name: #{params["team"]["members"][2]["name"]}" %></h2>
+  <p><%="Hero Power: #{params["team"]["members"][2]["power"]}" %></p>
+  <p><%="Hero Biography: #{params["team"]["members"][2]["bio"]}" %></p>
+
  </body>
 </html>
 
