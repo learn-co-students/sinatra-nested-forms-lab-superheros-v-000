@@ -1,4 +1,6 @@
 require 'sinatra/base'
+require_all 'app/models'
+
 
 class App < Sinatra::Base
 
