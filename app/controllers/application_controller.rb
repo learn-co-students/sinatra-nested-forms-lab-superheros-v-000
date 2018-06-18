@@ -1,6 +1,7 @@
 require 'sinatra/base'
-require_all 'app/models'
-
+require './app/models/team.rb'
+require './app/models/hero.rb'
+require 'pry'
 
 class App < Sinatra::Base
 
@@ -8,12 +9,22 @@ class App < Sinatra::Base
     
   get '/' do 
     erb :super_hero
-  end
+  end 
   
   post '/teams' do 
-   
+    @team = Team.create(name: params[:team][:name], motto: params[:team][:motto])
+
+    params[:team][:heros].each do |details|
+        hero = Hero.create(details)
+        hero.team_id = @team.id
+        hero.save
+      end
+  
+    @superheroes = @team.heros
+    
     erb :team
   end
-
+  
+  
 
 end
