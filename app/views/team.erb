@@ -1,9 +1,13 @@
 <!DOCTYPE>
 <html>
-<h1> Flatiron </h1>
-<p> <h2> Team Motto: School Rocks! </h2> </p>
-<p> <h2> Hero Name: <%= "#{params[:name]}" %> <h2> </p>
-<p> <h4> Hero Power: Super Pump </h4> </P>
-<p> <h4> Hero Biography: Power Super Pump </h4> </P>
+
+<h1> <%= @team.name %> </h1>
+<p> <h2> Team Motto: <%= @team.motto %> </h2> </p>
+<br>
+<% @heroes.each do |hero| %>
+<p> <h3> Hero Name: <%= hero.name %> <h3> </p>
+<p> <h4> Hero Power: <%= hero.power %> </h4> </P>
+<p> <h4> Hero Biography: <%= hero.bio %> </h4> </P>
+<% end %>
 
 </hmtl>
