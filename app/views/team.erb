@@ -4,10 +4,12 @@
 </div><br>
 
 <h1>Heroes</h1>
-<% @Heroes.each do |hero| %>
+<% i = 0 %>
+<% while i < 3 %>
   <div class="hero">
-    <p>Name: <%= hero_name %></p><br>
-    <p>Power: <%= hero_power %></p><br>
-    <p>Bio: <%= hero_bio %></p>
+    <p>Hero Name: <%= @hero_names[i] %></p><br>
+    <p>Hero Power: <%= @hero_powers[i] %></p><br>
+    <p>Hero Biography: <%= @hero_bios[i] %></p>
   </div><br>
+  <% i = i+1 %>
 <% end %>
