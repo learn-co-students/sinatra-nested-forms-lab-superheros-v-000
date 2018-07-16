@@ -1,7 +1,9 @@
+require 'pry'
+
 describe App do
 
   describe 'GET /' do
-    before do 
+    before do
       get '/'
     end
 
@@ -9,7 +11,7 @@ describe App do
       expect(last_response.status).to eq(200)
     end
 
-    it 'renders super hero form' do 
+    it 'renders super hero form' do
       expect(last_response.body).to include("Create a Team and Heroes!")
       expect(last_response.body).to include("<form")
     end
@@ -37,6 +39,7 @@ describe App do
       expect(page).to have_text("Hero Power: Ruby")
       expect(page).to have_text("Hero Biography: I love Ruby!")
       expect(page).to have_text("Hero Name: Arel")
+      #binding.pry
       expect(page).to have_text("Hero Power: JavaScript")
       expect(page).to have_text("Hero Biography: I love JavaScript!")
       expect(page).to have_text("Hero Name: Katie")
@@ -44,5 +47,5 @@ describe App do
       expect(page).to have_text("Hero Biography: I love Sinatra!")
     end
   end
-  
+
 end
