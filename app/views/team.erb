@@ -5,21 +5,23 @@
   </head>
   <body>
 
-    <h1><%=@team.name</h1>
+    <h1>Team <%=@team.name%></h1>
     <br>
-    <h1><%=@team.motto</h1>
+    <h1>Team Motto: <%=@team.motto%></h1>
     <br>
-    <h1><%=@member.first.name</h1>
-    <p>Hero Power: <%=@member.first.power%></p>
-    <p>Hero Biography: <%=@member.first.bio%></p>
-    <br>
-    <h1><%=@member[1].name</h1>
-    <p>Hero Power: <%=@member[1].power%></p>
-    <p>Hero Biography: <%=@member[1].bio%></p>
-    <br>
-    <h1><%=@member.last.name</h1>
-    <p>Hero Power: <%=@member.last.power%></p>
-    <p>Hero Biography: <%=@member.last.bio%></p>
+    <%@members.each do |member| %>
 
+    <h1>Hero Name: <%=member.name%></h1>
+    <p>Hero Power: <%=member.power%></p>
+    <p>Hero Biography: <%=member.bio%></p>
+    <br>
+    <h1>Hero Name: <%=member.name%></h1>
+    <p>Hero Power: <%=member.power%></p>
+    <p>Hero Biography: <%=member.bio%></p>
+    <br>
+    <h1>Hero Name: <%=member.name%></h1>
+    <p>Hero Power: <%=member.power%></p>
+    <p>Hero Biography: <%=member.bio%></p>
+    <%end%>
   </body>
 </html>
