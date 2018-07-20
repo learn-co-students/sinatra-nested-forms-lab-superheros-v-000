@@ -1,3 +1,0 @@
-class SuperHero
-
-end
