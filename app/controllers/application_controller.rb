@@ -9,7 +9,6 @@ class App < Sinatra::Base
     end
 
     post '/teams' do
-      binding.pry
       @team = Team.new(params[:team])
 
       params[:team][:superhero].each do |details|
@@ -19,5 +18,6 @@ class App < Sinatra::Base
       @superheroes = Superhero.all
 
       erb :team
+      binding.pry
     end
 end
