@@ -22,10 +22,3 @@ class App < Sinatra::Base
     end
 
 end
-# @new_pirate = Pirate.new(params[:pirate])
-
-# params[:pirate][:ships].each do |args|
-#   Ship.new(args)
-# end
-
-# @ships = Ship.all
