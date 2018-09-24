@@ -1,3 +1,15 @@
+<h1>Pirates</h1>
 
+<div class="team">
+  <h1>Team Name: <%= @team.name %></h1><br>
+  <h2>Team Motto: <%= @team.motto %></h2><br>
+</div><br>
 
-
+<h3>Members</h3>
+<% @super_hero.each do |hero| %>
+  <div class="super hero">
+    <p>Hero Name: <%= hero.name %></p><br>
+    <p>Hero Power: <%= hero.power %></p><br>
+    <p>Hero Biography: <%= hero.bio %></p>
+  </div><br>
+<% end %>
