@@ -1,3 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Show superhero team</title>
+</head>
+
+<h1>Team</h1>
+  <div class="team">
+    <h3><%= @team.name %></h3><br>
+    <h4>Team Motto: <%= @team.motto %></h4>
+  </div><br>
+  
+  <% @superhero.each do |h, index| %>
+  <% if index == 0 %>
+    <h2>Hero Name: <%= h.name %></h2>
+    <p> Hero Power: <%= h.power %></p>
+    <p> Hero Biography: <%= h.biography %></p>
+  <% elsif index == 1 %>
+    <h2>Hero Name: <%= h.name %></h2>
+    <p> Hero Power: <%= h.power %></p>
+    <p> Hero Biography: <%= h.biography %></p>
+ <% else %>
+    <h2>Hero Name: <%= h.name %></h2>
+    <p> Hero Power: <%= h.power %></p>
+    <p> Hero Biography: <%= h.biography %></p>
+ <% end %>
+ <% end %>
 
 
 
+<body>
