@@ -10,4 +10,8 @@ class Member
 
     MEMBERS << self
   end
+
+  def self.all
+    MEMBERS
+  end
 end
