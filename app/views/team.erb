@@ -1,20 +1,11 @@
-<h1><%= @team.name</h1>
+<h1><%= @team.name %></h1>
 
 <h2>Team Motto: <%=@team.motto%></h2>
 
 <% @heroes.each do |hero| %>
   <div class="hero">
-    <h2>Hero Name: <%= hero.name %></h2><br>
+    <p>Hero Name: <%= hero.name %></p><br>
     <p>Hero Power: <%= hero.power %></p><br>
-    <p>Hero Biography: <%= hero.biography %></p><br>
-  </div><br>
-<% end %>
-
-
-<% @ships.each do |ship| %>
-  <div class="ship">
-    <p>Name: <%= ship.name %></p><br>
-    <p>Type: <%= ship.type %></p><br>
-    <p>Booty: <%= ship.booty %></p><br>
+    <p>Hero Biography: <%= hero.biography %></p><br><br>
   </div><br>
 <% end %>
