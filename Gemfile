@@ -2,7 +2,9 @@
 source "https://rubygems.org"
 
 # gem "rails"
-
+gem 'activerecord', :require => 'active_record'
+gem 'sinatra-activerecord', :require=> 'sinatra/activerecord'
+gem 'sqlite3'
 gem 'sinatra', '1.4.3'
 gem 'rake', '10.4.2'
 gem 'thin', '1.6.4'
