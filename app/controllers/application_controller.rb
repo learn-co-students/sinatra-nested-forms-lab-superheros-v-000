@@ -1,8 +1,12 @@
 require 'sinatra/base'
 
 class App < Sinatra::Base
+   set :views, Proc.new { File.join(root, "../views/") }
+  get '/' do
+    erb :new
+  end
 
-    set :views, Proc.new { File.join(root, "../views/") }
-
-
+  post '/teams' do
+    erb :team
+  end
 end
