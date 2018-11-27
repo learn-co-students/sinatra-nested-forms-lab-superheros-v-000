@@ -19,7 +19,7 @@ class App < Sinatra::Base
         hero.bio = params[:team][:heroes][0]["member#{index + 1}_bio"]
         @team.heroes << hero
       end
-
+      # binding.pry
       erb :show
     end
 

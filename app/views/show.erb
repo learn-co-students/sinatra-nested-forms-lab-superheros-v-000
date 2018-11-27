@@ -2,6 +2,10 @@
 
 <h2>Team Motto:<%=@team.motto%></h2>
 
-<%=binding.pry%>
 
-<%=@team.heroes.motto%>
+<%@team.heroes.each do |hero| %>
+
+  <h2>Hero Name:<%=hero.name%></h2>
+  <p>Hero Power:<%=hero.power%></p>
+  <p>Hero bio:<%=hero.bio%></p>
+<%end%>
