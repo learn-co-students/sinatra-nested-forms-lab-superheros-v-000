@@ -9,18 +9,21 @@ class App < Sinatra::Base
     end
 
     post '/teams' do
-      # binding.pry
+
       @team = Team.new(name: params[:team][:name], motto: params[:team][:motto])
 
-      params[:team].each do |hero_data|
-        binding.pry
+      params[:team][:heroes].each_with_index do |hero_data, index|
         hero = Hero.new
-        hero.name = hero_data[:name]
-        hero.power = hero_data[:power]
-        ship.bio = hero_data[:bio]
+        hero.name = params[:team][:heroes][0]["member#{index + 1}_name"]
+        hero.power = params[:team][:heroes][0]["member#{index + 1}_power"]
+        hero.bio = params[:team][:heroes][0]["member#{index + 1}_bio"]
         @team.heroes << hero
       end
 
+      erb :show
+    end
+
+    get '/teams' do
       erb :show
     end
 
