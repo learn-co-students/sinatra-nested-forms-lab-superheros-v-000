@@ -14,17 +14,20 @@ class App < Sinatra::Base
 
       params[:team][:heroes].each_with_index do |hero_data, index|
         hero = Hero.new
-        hero.name = params[:team][:heroes][0]["member#{index + 1}_name"]
-        hero.power = params[:team][:heroes][0]["member#{index + 1}_power"]
-        hero.bio = params[:team][:heroes][0]["member#{index + 1}_bio"]
+        binding.pry
+        hero.name = hero_data["member#{index + 1}_name".to_sym]
+        hero.power = hero_data["member#{index + 1}_power".to_sym]
+        hero.bio = hero_data["member#{index + 1}_bio".to_sym]
         @team.heroes << hero
+        # binding.pry
       end
-      # binding.pry
+      @team
+        # binding.pry
       erb :show
     end
 
-    get '/teams' do
-      erb :show
-    end
+    # get '/teams' do
+    #   erb :show
+    # end
 
 end
