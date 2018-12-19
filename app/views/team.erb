@@ -1,32 +1,24 @@
 <h1><%= @team.name %></h1>
-<p><h2>Team Motto: <%= @team:motto %></h2></p>
+<p><h2>Team Motto: <%= @team.motto %></h2></p>
 
 <p><h2>Hero 1</h2></p>
 <ul>
-  <!-- <%params[:team][:member].each do |member| %> -->
-  <li>Hero Name: <%= @member[0]['name']%></li>
-  <li>Hero Power: <%= @member[0]['power']%></li>
-  <li>Hero Biography: <%= @member[0]['Biography']%></li>
+
+  <li>Hero Name: <%= @members[0].name%></li>
+  <li>Hero Power: <%= @members[0].power%></li>
+  <li>Hero Biography: <%= @members[0].biography%></li>
 </ul>
 
 <p><h2>Hero 2</h2></p>
 <ul>
-  <li>Hero Name: <%= @member[1]['name']%></li>
-  <li>Hero Power: <%= @member[1]['power']%></li>
-  <li>Hero Biography: <%= @member[1]['Biography']%></li>
+  <li>Hero Name: <%= @members[1].name%></li>
+  <li>Hero Power: <%= @members[1].power%></li>
+  <li>Hero Biography: <%= @members[1].biography%></li>
 </ul>
 
 <p><h2>Hero 3</h2></p>
 <ul>
-  <li>Hero Name: <%= @member[2]['name']%></li>
-  <li>Hero Power: <%= @member[2]['power']%></li>
-  <li>Hero Biography: <%= @member[2]['Biography']%></li>
+  <li>Hero Name: <%= @members[2].name%></li>
+  <li>Hero Power: <%= @members[2].power%></li>
+  <li>Hero Biography: <%= @members[2].biography%></li>
 </ul>
-
-
-<!-- # <% @courses.each do |course| %>
-#   <div class="course">
-#     <p>Name: <%= course.name %></p><br>
-#     <p>Topic: <%= course.topic %></p><br>
-#   </div><br>
-# <% end %> -->
