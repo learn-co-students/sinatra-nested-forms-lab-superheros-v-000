@@ -1,3 +1,13 @@
+<div class="team">
+  <%= @team.name %> </title> <!-- Readme picture is wrong. needs word team at top -->
 
+  <h1> Team Motto: <%= @team.motto %></h1>
+</div>
 
-
+<% @superheroes.each do |superhero| %> <!-- this = isn't needed -->
+  <div class="superheroes">
+    <h1> Hero Name: <%= superhero.name %> </h1>
+    <p> Hero Power: <%= superhero.power %> </p>
+    <p> Hero Biography: <%= superhero.biography %> </p>
+  </div>
+<%end%>
