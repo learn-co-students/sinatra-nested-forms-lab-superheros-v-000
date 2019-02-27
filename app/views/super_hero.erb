@@ -9,26 +9,37 @@
   <h1>Create a Team and Heroes!</h1>
 
    <form method="post" action="/super_heroes">
-    <label for="name"> Pirate Name:</label><br>
-    <input type="text" id="name" name="pirate[name]"><br>
-    <label for="weight"> Pirate Weight:</label><br>
-    <input type="text" id="weight" name="pirate[weight]"><br>
-    <label for="age"> Pirate Height:</label><br>
-    <input type="text" id="height" name="pirate[height]"><br>
+    <label for="team_name"> Team Name:</label><br>
+    <input type="text" id="name" name="team[name]"><br>
+    <label for="team_motto"> Team Motto:</label><br>
+    <input type="text" id="weight" name="team[motto]"><br>
 
-     <label for="name">First Ship's Name:</label><br>
-    <input type="text" id="ship_name_1" name="pirate[ships][][name]"><br>
-    <label for="name">First Ship's Type:</label><br>
-    <input type="text" id="ship_type_1" name="pirate[ships][][type]"><br>
-    <label for="name">First Ship's Booty:</label><br>
-    <input type="text" id="ship_booty_1" name="pirate[ships][][booty]"><br>
+    <h2>Hero 1</h2>
 
-     <label for="name">Second Ship's Name:</label><br>
-    <input type="text" id="ship_name_2" name="pirate[ships][][name]"><br>
-    <label for="name">Second Ship's Type:</label><br>
-    <input type="text" id="ship_type_2" name="pirate[ships][][type]"><br>
-    <label for="name">Second Ship's Booty:</label><br>
-    <input type="text" id="ship_booty_2" name="pirate[ships][][booty]"><br>
+     <label for="name">Hero's Name:</label><br>
+    <input type="text" id="heros_name_1" name="team[super_heros][][name]"><br>
+    <label for="name">Hero's Power:</label><br>
+    <input type="text" id="heros_power_1" name="team[super_heros][][power]"><br>
+    <label for="name">Hero's Biography:</label><br>
+    <input type="text" id="heros_biography_1" name="team[super_heros][][biography]"><br>
+
+    <h2>Hero 2</h2>
+
+    <label for="name">Hero's Name:</label><br>
+    <input type="text" id="heros_name_2" name="team[super_heros][][name]"><br>
+    <label for="name">Hero's Power:</label><br>
+    <input type="text" id="heros_power_2" name="team[super_heros][][power]"><br>
+    <label for="name">Hero's Biography:</label><br>
+    <input type="text" id="heros_biography_2" name="team[super_heros][][biography]"><br>
+
+    <h2>Hero 3</h2>
+
+    <label for="name">Hero's Name:</label><br>
+    <input type="text" id="heros_name_3" name="team[super_heros][][name]"><br>
+    <label for="name">Hero's Power:</label><br>
+    <input type="text" id="heros_power_3" name="team[super_heros][][power]"><br>
+    <label for="name">Hero's Biography:</label><br>
+    <input type="text" id="heros_biography_3" name="team[super_heros][][biography]"><br>
 
      <input type="submit" value="Submit">
   </form>
