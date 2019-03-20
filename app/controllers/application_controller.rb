@@ -16,8 +16,8 @@ class App < Sinatra::Base
 
         @hero_name = []
         @hero_power = []
-        @hero_biography = []
-
+        @hero_bio = []
+        
         @super_heroes = members.each do |member_params|
 
 
@@ -27,9 +27,13 @@ class App < Sinatra::Base
         bio: member_params[:bio]}
           )
 
-        end
-
-        erb :team
       end
 
-  end
+      erb :team
+
+
+end
+m
+
+
+end
