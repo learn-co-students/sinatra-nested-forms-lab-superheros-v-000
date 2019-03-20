@@ -11,28 +11,36 @@ class App < Sinatra::Base
 
     post '/teams' do
       # binding.pry
-        @team_name = []
-        @team_motto = []
+
+        @team_name = params[:team][:name]
+        @team_motto = params[:team][:name]
         # @team_member = []
 
         @hero_name = []
-        @ero_power = []
+        @hero_power = []
         @hero_bio = []
 
-        @heroes = members.each do |member_params|
+        @team_members = params[:team][:members]
+        @team_members.each do|hero|
+
+        @hero_name << hero[:name]
+        @hero_power << hero[:power]
+        @hero_bio <<hero[:bio]
+
+        # @heroes = members.each do |member_params|This is wrong
 
 
-        Hero.new(
-        {name: member_params[:name],
-        power: member_params[:power],
-        bio: member_params[:bio]}
-          )
+        #
+        # Hero.new(
+        # {name: member_params[:name],
+        # power: member_params[:power],
+        # bio: member_params[:bio]}
+        #   )
 
       end
 
       erb :team
 
     end
-
 
 end
