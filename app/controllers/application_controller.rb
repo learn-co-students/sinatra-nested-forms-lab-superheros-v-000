@@ -22,7 +22,7 @@ class App < Sinatra::Base
         @heroes = members.each do |member_params|
 
 
-        SuperHero.new(
+        Hero.new(
         {name: member_params[:name],
         power: member_params[:power],
         bio: member_params[:bio]}
@@ -32,9 +32,7 @@ class App < Sinatra::Base
 
       erb :team
 
-
-end
-
+    end
 
 
 end
