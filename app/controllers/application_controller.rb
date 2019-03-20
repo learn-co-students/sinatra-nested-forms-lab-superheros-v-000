@@ -10,15 +10,16 @@ class App < Sinatra::Base
     end
 
     post '/teams' do
+      # binding.pry
         @team_name = []
         @team_motto = []
-        @team_member = []
+        # @team_member = []
 
         @hero_name = []
-        @hero_power = []
+        @ero_power = []
         @hero_bio = []
-        
-        @super_heroes = members.each do |member_params|
+
+        @heroes = members.each do |member_params|
 
 
         SuperHero.new(
@@ -33,7 +34,7 @@ class App < Sinatra::Base
 
 
 end
-m
+
 
 
 end
