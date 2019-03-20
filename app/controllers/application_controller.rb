@@ -14,6 +14,10 @@ class App < Sinatra::Base
         @team_motto = []
         @team_member = []
 
+        @hero_name = []
+        @hero_power = []
+        @hero_biography = []
+
         @super_heroes = members.each do |member_params|
 
 
