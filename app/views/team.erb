@@ -1,17 +1,24 @@
 
 <h1>Team</h1>
+<h1><%=@team_name%>>/<h1>
+<h3>Team Motto:<%=@team_motto%></h3>
 
-<div class="team">
-  <h3><%=@team_name %></h1>
-  <h3>Team Motto:<%=@team_motto%></h3>
+<div class="team"> -->
+  <!-- <h3><%=@team_name%></h1> -->
 
+
+  <% @team_members.each do |hero, index |%>
+      end
       </div><br>
 
-<div class="hero">
-  <h2>Hero Name: <%=@hero_name%></h2>
-  <h2>Hero Power: <%=@hero_power%></h2>
-  <h2>Hero Biography: <%=@hero_bio%></h2>
+<!-- <div class="hero">
+  <%=@team_members.each do|hero|%>
+
+   <!-- <h2>Hero Name: <%=@hero_name[index]%></h2>
+  <h2>Hero Power: <%=@hero_power[index]%></h2>
+  <h2>Hero Biography: <%=@hero_bio[index]%></h2> --> -->
 
     </div><br>
 
     <% end %>
+<!-- # *Iterate over team members array in view in order to display on page* -->
