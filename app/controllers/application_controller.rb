@@ -29,6 +29,7 @@ class App < Sinatra::Base
 
       erb :team
 
+*Iterate over team members array in view in order to display on page*
     end
 
 end
