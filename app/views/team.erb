@@ -1,16 +1,15 @@
 <h1>Team Name: <%= params["team"]["name"] %></h1>
 <h2>Team Motto: <%= params["team"]["motto"] %></h2>
 
-<h2>Hero Name:<%= params["team"]["members"]["name"] %></h2>
-  <p>Hero Power:<%= params["team"]["members"]["power"] %></p>
-  <%=  pp params %>
+<h2>Hero Name: <%= params["team"]["members"][0]["name"] %></h2>
+  <p>Hero Power: <%= params["team"]["members"][0]["power"] %></p>
+  <p>Hero Biography: <%= params["team"]["members"][0]["bio"] %></p>
 
-  <p>Hero Biography: </p>
-
-<h2>Hero Name:</h2>
+<h2>Hero Name: <%= params["team"]["members"][1]["bio"] %></h2>
   <p>Hero Power: </p>
   <p>Hero Biography: </p>
 
 <h2>Hero Name:</h2>
   <p>Hero Power: </p>
   <p>Hero Biography: </p>
+  <!-- <%=  pp params %> -->
