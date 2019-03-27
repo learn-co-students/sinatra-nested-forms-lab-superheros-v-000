@@ -13,12 +13,4 @@
   <p>Hero Power: <%= params["team"]["members"][2]["power"] %></p>
   <p>Hero Biography: <%= params["team"]["members"][2]["bio"] %> </p>
 
-
-<!-- iterate through params - .each
-params[:team][:members].each do |details|
-  create hero name
-  create hero power
-  create hero bio
-end
-*look in Sinatra Nested Forms lab
-?? iterate in this file?-->
+<%= pp params %>
