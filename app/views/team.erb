@@ -1,7 +1,7 @@
 <h1>Team Name: <%= params["team"]["name"] %></h1>
 <h2>Team Motto: <%= params["team"]["motto"] %></h2>
 
-<h2>Hero Name: <%= params["team"]["members"][0]["name"] %></h2>
+<h2>Hero Name: <%= @hero_name %></h2> <!-- params["team"]["members"][0]["name"] -->
   <p>Hero Power: <%= params["team"]["members"][0]["power"] %></p>
   <p>Hero Biography: <%= params["team"]["members"][0]["bio"] %></p>
 
