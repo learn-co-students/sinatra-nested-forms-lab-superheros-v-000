@@ -9,20 +9,16 @@ class App < Sinatra::Base
     end
 
     post '/teams' do
-      erb :team
-      # iterate through params - .each.with_index
       @hero_name = []
       @hero_power = []
       @hero_bio = []
 
-      params[:team][:members].each.with_index do |value, index|
-        # puts "#{index}: #{value}"
+      params[:team][:members].each do |value|
         @hero_name << value[:name]
         @hero_power << value[:power]
         @hero_bio << value[:bio]
-        # binding.pry
       end
-
+      erb :team
     end
 
 
