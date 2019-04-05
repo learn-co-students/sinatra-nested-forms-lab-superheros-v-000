@@ -4,7 +4,7 @@ class Team
 
   def initialize(args)
     @name= args[:name]
-    @power= args[:motto]
+    @motto= args[:motto]
     @@all << self
   end
   def self.all
