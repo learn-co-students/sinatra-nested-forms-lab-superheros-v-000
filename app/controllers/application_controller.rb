@@ -15,7 +15,6 @@ class App < Sinatra::Base
     hero_hash.each do |info|
       Superhero.new(info)
     end
-     #binding.pry
     @all_superheroes = Superhero.all
     erb :'team'
   end
