@@ -1,12 +1,12 @@
 class SuperHero
-  attr_accessor :name, :hero_power, :hero_biography
+  attr_accessor :name, :power, :biography
 
   SUPERHEROS = []
 
   def initialize(params)
     @name = params[:name]
-    @hero_power= params[:hero_power]
-    @hero_biography= params[:hero_biography]
+    @power= params[:power]
+    @biography= params[:biography]
 
     SUPERHEROS << self
   end
