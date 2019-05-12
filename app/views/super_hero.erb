@@ -1,1 +1,38 @@
 
+<form action='/teams' method="POST">
+  <h1>Create a Team and Heroes!</h1>
+  <h2>Team</h2>
+  <label for="team_name">Name</label><br>
+  <input id="team_name" type="text" name="team[name]" /><br>
+  <label for="team_motto">motto</label><br>
+  <input id="team_motto" type="text" name="team[motto]" /><br>
+  <h2>Superheroes!</h2>
+  <h3>HERO 1</h3>
+    <label for="member1_name">Name</label><br>
+    <input id="member1_name" type="text" name="team[members][][name]" /><br>
+    <label for="member1_power">Power</label><br>
+    <input id="member1_power" type="text" name="team[members][][power]" /><br>
+    <label for="member1_bio">Bio</label><br>
+    <input id="member1_bio" type="text" name="team[members][][bio]" /><br><br>
+<h3>HERO 2</h3>
+    <label for="member2_name">Name</label><br>
+    <input id="member2_name" type="text" name="team[members][][name]" /><br>
+    <label for="member2_power">Power</label><br>
+    <input id="member2_power" type="text" name="team[members][][power]" /><br>
+    <label for="member2_bio">Bio</label><br>
+    <input id="member2_bio" type="text" name="team[members][][bio]" /><br><br>
+<h3>HERO 3</h3>
+    <label for="member3_name">Name:</label><br>
+    <input id="member3_name" type="text" name="team[members][][name]" /><br>
+    <label for="member3_power">Hero Power:</label><br>
+    <input id="member3_power" type="text" name="team[members][][power]" /><br>
+    <label for="member3_bio">Bio:</label><br>
+    <input id="member3_bio" type="text" name="team[members][][bio]" /><br><br>
+    <input type="submit" value="submit">
+
+
+<!-- <input id="member1_name" type="text" name="team[members][][name]"> -->
+
+<!-- The form should have fields for the `name` of a superhero team and their `motto`.
+4. There should be form inputs for each of the three superhero member's `name`, `power`, and `bio`. -->
+</form>
