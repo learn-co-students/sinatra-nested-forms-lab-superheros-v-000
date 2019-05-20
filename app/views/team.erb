@@ -1,3 +1,8 @@
+<h1><%= "#{@new_team.name}" %></h1>
+<h3><%= "Team Motto: #{@new_team.motto}" %></h3>
 
-
-
+<% @list_heroes.each do |indi| %>
+  <h3><%= "Hero Name: #{indi.name}" %></h3>
+  <p><%= "Hero Power: #{indi.power}" %></p>
+  <p><%= "Hero Biography: #{indi.bio}" %></p>
+<% end %>
