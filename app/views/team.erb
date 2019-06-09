@@ -1,3 +1,15 @@
+<div class="team">
+  <h3>Team Name: <%= @team_name %></h3><br>
+  <h4>Team Motto: <%= @team_motto %></h4><br>
+</div><br>
 
-
-
+<h1>Heroes</h1>
+<% i = 0 %>
+<% while i < 3 %>
+  <div class="hero">
+    <p>Hero Name: <%= @hero_names[i] %></p><br>
+    <p>Hero Power: <%= @hero_powers[i] %></p><br>
+    <p>Hero Biography: <%= @hero_bios[i] %></p>
+  </div><br>
+  <% i = i+1 %>
+<% end %>
