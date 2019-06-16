@@ -1,0 +1,10 @@
+team has many members
+team has a motto
+heroes have powers
+heroes have bio
+
+team {
+[team_name] = name,
+[team_motto] = motto,
+[heroes] = [{name=> }, {powers=> }, {bio=> }]
+}
