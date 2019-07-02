@@ -1,1 +1,25 @@
+<% require 'pry' %>
+<!DOCTYPE html>
+<html>
+  	<head>
+    	<meta charset="UTF-8">
+    	<title>Superheros</title>
+  	</head>
+  	<body>
 
+		<h1><%= @team.name %></h1>
+		<h2> Team Motto: <%= @team.motto %></h2>
+
+
+		<h1>Heros</h1>
+		<% @members.each_with_index do |hero, index| %>
+		<div class="hero">
+			<h1> Hero #<%= "#{index + 1}" %></h1>
+    		<h2>Hero Name: <%= hero.name %></h2>
+    		<h2>Hero Power: <%= hero.power %></h2>
+			<h2>Hero Biography: <%= hero.biography %></h2>
+  			<br>
+		</div>
+		<% end %>
+  	</body>
+</html>
