@@ -4,7 +4,7 @@ class Hero
   
   def initialize(hero_traits)
     @name = hero_traits[:name]
-    @motto = hero_traits[:power]
+    @power = hero_traits[:power]
     @bio = hero_traits[:bio]
 
     @@all << self
