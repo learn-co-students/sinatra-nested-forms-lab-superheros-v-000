@@ -1,1 +1,54 @@
+<!-- params = {
+    "team" => {
+      "name" => "Random name",
+      "motto" => "Go team!",
+      "members" => {
+        [
+          {"name" => "Name1", "power" => "Power1", "bio" => "Bio1"},
+          {"name" => "Name2", "power" => "Power2", "bio" => "Bio2"},
+          {"name" => "Name3", "power" => "Power3", "bio" => "Bio3"}
+        ]
+      }
+    }
+  }
+-->
 
+<h1>Create a Team and Heroes!</h1>
+
+<form method="POST" action="/teams">
+  <p>
+    <label for="team[name]">Team Name:</label>
+    <input type="text" id="team[name]" name="team[name]" />
+  </p>
+  
+  <p>
+    <label for="team[motto]">Team Motto:</label>
+    <input type="text" id="team[motto]" name="team[motto]" />
+  </p>
+  
+  <!-- Test code: -->
+  <%# (0..5).each do |num| %>
+    <!-- <h2 class="my <%#= num %> heading">My <%#= num %> heading</h2> -->
+  <%# end %>
+  <!-- It works!!! (Minus the #'s, of course) -->
+  
+  <% (1..3).each do |num| %>
+    <h2>Hero <%= num %></h2>
+    <p>
+      <label for="member<%= num %>_name">Hero's Name:</label>
+      <input type="text" id="member<%= num %>_name" name="team[members][][name]" />
+    </p>
+    <p>
+      <label for="member<%= num %>_power">Hero's Power:</label>
+      <input type="text" id="member<%= num %>_power" name="team[members][][power]" />
+    </p>
+    <p>
+      <label for="member<%= num %>_bio">Hero's Biography:</label>
+      <input type="text" id="member<%= num %>_bio" name="team[members][][bio]" />
+    </p>
+  <% end %>
+  
+  <p>
+    <button value="submit">submit</button>
+  </p>
+</form>
