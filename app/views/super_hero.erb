@@ -1,3 +1,8 @@
+<!-- params = {
+  
+  }
+-->
+
 <h1>Create a Team and Heroes!</h1>
 
 <form method="POST" action="/teams">
@@ -21,12 +26,19 @@
     <h2>Hero <%= num %></h2>
     <p>
       <label for="hero_name_<%= num %>">Hero's Name:</label>
-      <input type="text" id="team_motto" />
+      <input type="text" id="hero_name_<%= num %>" />
+    </p>
+    <p>
+      <label for="hero_power_<%= num %>">Hero's Power:</label>
+      <input type="text" id="hero_power_<%= num %>" />
+    </p>
+    <p>
+      <label for="hero_bio_<%= num %>">Hero's Biography:</label>
+      <input type="text" id="hero_bio_<%= num %>" />
     </p>
   <% end %>
   
   <p>
     <button value="submit">submit</button>
   </p>
-  <!-- Note: Before I move on, I should figure out what I want my params to look like. -->
 </form>
