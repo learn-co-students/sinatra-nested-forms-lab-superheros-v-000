@@ -9,6 +9,7 @@ class App < Sinatra::Base
     end
     
     post '/teams' do
-      
+      puts params
     end
+    
 end
