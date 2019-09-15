@@ -4,5 +4,21 @@ class App < Sinatra::Base
 
     set :views, Proc.new { File.join(root, "../views/") }
 
+    get '/' do
+      erb :super_hero
+    end
+
+    post '/teams' do
+      #alternate way when an object not a hash is expected (ActiveRecord models)
+      # @team = Team.new(name: params[:team][:name], motto: params[:team][:motto])
+      @team = Team.new(params[:team])
+
+      params[:team][:heros].each do |details|
+        Hero.new(details)
+      end
+
+      @heros = Hero.all
+      erb :team
+    end
 
 end
