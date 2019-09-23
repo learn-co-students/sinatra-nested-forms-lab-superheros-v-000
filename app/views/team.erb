@@ -1,3 +1,7 @@
-
-
-
+<h1><%=@teamname%><br>
+Team Motto: <%=@teammotto%></h1>
+    <% @teammembers.each.with_index do |member, index| %>
+      Hero Name: <%=@heronames[index]%><br>
+      Hero Power: <%=@heropowers[index]%><br>
+      Hero Biography: <%=@herobios[index]%><br>
+    <%end%>
