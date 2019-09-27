@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Super Hero</title>
+    <style media="screen">
+      body {
+        font-family: Arial, sans-serif;
+        margin: 5rem;
+        width: 100%;
+        height: 100%;
+      }
+
+      .member {
+        background: seashell;
+        padding: 2rem;
+        margin-bottom: 1rem;
+        transition: all .2s;
+      }
+
+      .member:hover {
+        background: antiquewhite;
+      }
+
+      .col {
+        float: left;
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <%= yield %>
+  </body>
+</html>
