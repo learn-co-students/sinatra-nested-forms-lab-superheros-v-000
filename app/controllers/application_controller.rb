@@ -7,8 +7,8 @@ class App < Sinatra::Base
     get '/' do
       erb :index
     end
-      #  binding.pry
-      post '/teams/' do
+      
+      post '/teams' do
 
         @team = Team.new(params[:name],params[:motto])
         erb :'teams/team'
