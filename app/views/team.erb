@@ -1,3 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Team</title>
+  </head>
+  <body>
+    <h1><%= "#{@team.name}" %></h1>
+    <h2>Team Motto: <%= "#{@team.motto}" %></h2>
 
-
-
+    <% SuperHero.all.each do |hero| %>
+      <h3>Hero Name: <%= hero.name %></h3>
+      Hero Power: <%= hero.power %><br>
+      Hero Biography: <%= hero.bio %>
+    <% end %>
+  </body>
+</html>
