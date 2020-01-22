@@ -29,6 +29,8 @@ class App < Sinatra::Base
  
  
  
+ 
+ 
    #@team = Team.new(name: params[:team][:name], motto: params[:team][:motto])
    #members = params[:team][:members]
    
