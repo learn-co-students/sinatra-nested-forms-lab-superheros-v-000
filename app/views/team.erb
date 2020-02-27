@@ -1,3 +1,10 @@
+include 'pry'
 
-
-
+<%= @team_name %>
+<%= "Team Motto: #{@team_motto}" %>
+<% @team_members.each do |m|  %>
+<%= "Hero Name: #{m[:name]}" %>
+<%= "Hero Power: #{m[:power]}" %>
+<%= "Hero Biography: #{m[:bio]}" %>
+<% end %>
+binding.pry
