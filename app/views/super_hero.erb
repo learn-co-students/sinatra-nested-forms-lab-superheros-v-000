@@ -1,1 +1,60 @@
+<!-- 
+WHY CAN WE USE LABEL FOR VALUE TO SET VALUE OF THE INPUT? -->
 
+<h1>Create a Team and Heroes!</h1>
+<form method="post" action="teams">
+  <label for ="team_name"> Team Name </label>
+  <input type="text" id="team_name" name="team[name]"/><br>
+  <label for ="team_motto"> Team Motto </label>
+  <input type="text" id="team_motto" name="team[motto]"/><br>
+
+   <label for="member1_name"> Member Name 1 </label>
+   <input type="text" id="member1_name" name="team[members][][name]"/><br>
+   <label for="member1_power"> Member Power 1 </label>
+   <input type="text" id="member1_power" name="team[members][][power]"/><br>
+   <label for="member1_bio"> Member Bio 1 </label>
+   <input type="text" id="member1_bio" name="team[members][][bio]"/><br>
+
+   <label for="member2_name"> Member Name 2 </label>
+   <input type="text" id="member2_name" name="team[members][][name]"/><br>
+   <label for="member2_power"> Member Power 2 </label>
+   <input type="text" id="member2_power" name="team[members][][power]"/><br>
+   <label for="member2_bio"> Member Bio 2 </label>
+   <input type="text" id="member2_bio" name="team[members][][bio]"/><br>
+
+   <label for="member3_name"> Member Name 3 </label>
+   <input type="text" id="member3_name" name="team[members][][name]"/><br>
+   <label for="member3_power"> Member Power 3 </label>
+   <input type="text" id="member3_power" name="team[members][][power]"/><br>
+   <label for="member3_bio"> Member Bio 3 </label>
+   <input type="text" id="member3_bio" name="team[members][][bio]"/><br>
+
+   <input type="submit" value="submit"/>
+
+
+</form>
+<!--
+
+params = {
+  :team => {
+    :name =>
+    :motto =>
+    :members => [
+      {
+        :name =>
+        :power =>
+        :bio =>
+      },
+      {},
+      {}
+    ]
+  }
+}
+
+team[name] #the VALUE of team is a HASH with a name ATTRIBUTE
+team[motto]
+
+the VALUE of the team[members][] ARRAY is a HASH with three attributes: name, power, bio
+team[members][][name]
+team[members][][power]
+team[members][][bio] -->
