@@ -1,1 +1,88 @@
+<form action="/teams" method="post">
+  
+  <div class="form-group">
+    <label for="name" class="col-sm-2 control-label">Team Name: </label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control" name="team[name]" id="team_name_1" placeholder="Member Name">
+    </div>
+  </div>
 
+  <div class="form-group">
+    <label for="name" class="col-sm-2 control-label">Team Motto: </label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control" name="team[motto]" id="team_motto_1" placeholder="Member Name">
+    </div>
+  </div>
+
+  <h3>Hero 1</h3>
+
+  <div class="form-group">
+    <label for="name" class="col-sm-2 control-label">Hero's Name: </label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control" name="team[member][][name]" id="member1_name" placeholder="Hero Name">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="name" class="col-sm-2 control-label">Hero's Power: </label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control" name="team[member][][power]" id="member1_power" placeholder="Hero Power">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="name" class="col-sm-2 control-label">Hero's Biography: </label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control" name="team[member][][bio]" id="member1_bio" placeholder="Hero Bio">
+    </div>
+  </div>
+
+    <h3>Hero 2</h3>
+
+  <div class="form-group">
+    <label for="name" class="col-sm-2 control-label">Hero's Name: </label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control" name="team[member][][name]" id="member2_name" placeholder="Hero Name">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="name" class="col-sm-2 control-label">Hero's Power: </label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control" name="team[member][][power]" id="member2_power" placeholder="Hero Power">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="name" class="col-sm-2 control-label">Hero's Biography: </label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control" name="team[member][][bio]" id="member2_bio" placeholder="Hero Bio">
+    </div>
+  </div>
+
+  <h3>Hero 3</h3>
+
+  <div class="form-group">
+    <label for="name" class="col-sm-2 control-label">Hero's Name: </label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control" name="team[member][][name]" id="member3_name" placeholder="Hero Name">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="name" class="col-sm-2 control-label">Hero's Power: </label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control" name="team[member][][power]" id="member3_power" placeholder="Hero Power">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="name" class="col-sm-2 control-label">Hero's Biography: </label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control" name="team[member][][bio]" id="member3_bio" placeholder="Hero Bio">
+    </div>
+  </div>
+
+
+  <input type="submit" value="submit">
+</form>
