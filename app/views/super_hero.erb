@@ -1,1 +1,58 @@
+<h1>Create a Team and Heroes!</h1>
 
+<form action="/team" method="POST">
+
+<p>Team name: <input id="team_name" type="text" name="team[name]"></p>
+<p>Team motto: <input id="motto" type="text" name="team[motto]"></p>
+
+<h2>Hero 1</h2>
+
+<p>Hero name: <input id="member1_name" type="text" name="team[members][][name]"></p>
+<p>Hero power: <input id="member1_power" type="text" name="team[members][][power]"></p>
+<p>Hero biography: <input id="member1_bio" type="text" name="team[members][][biography]"></p>
+
+<h2>Hero 2</h2>
+
+<p>Hero name: <input id="member2_name" type="text" name="team[members][][name]"></p>
+<p>Hero power: <input id="member2_power" type="text" name="team[members][][power]"></p>
+<p>Hero biography: <input id="member2_bio" type="text" name="team[members][][biography]"></p>
+
+<h2>Hero 3</h2>
+
+<p>Hero name: <input id="member3_name" type="text" name="team[members][][name]"></p>
+<p>Hero power: <input id="member3_power" type="text" name="team[members][][power]"></p>
+<p>Hero biography: <input id="member3_bio" type="text" name="team[members][][biography]"></p>
+
+<input type="submit" id="submit" value="Submit">
+
+
+</form>
+
+
+
+      
+
+
+<%# GUIDELINES: params["team"]["members"]  ~ to see members %> 
+<%# to see member name = params["team"]["members"][0]["name"] %>
+<%# 
+team = {
+name, 
+motto, 
+members = [ 
+
+    {
+
+    },
+
+    {
+
+    }
+
+
+
+
+
+]
+
+} %>
