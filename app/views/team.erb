@@ -1,3 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1><%=params[:team][:name]%></h1>
+    <h2>Team Motto: <%=params[:team][:motto] %></h2>
 
+    <h1>Hero Name: <%=params[:team][:members][0][:name]%></h1>
+      Hero Power: <%=params[:team][:members][0][:power]%> <br>
+      Hero Biography: <%=params[:team][:members][0][:biography]%>
 
+    <h1>Hero Name: <%=params[:team][:members][1][:name]%></h1>
+      Hero Power: <%=params[:team][:members][1][:power]%><br>
+      Hero Biography: <%=params[:team][:members][1][:biography]%>
 
+    <h1>Hero Name: <%=params[:team][:members][2][:name]%></h1>
+      Hero Power: <%=params[:team][:members][2][:power]%><br>
+      Hero Biography: <%=params[:team][:members][2][:biography]%>
+
+  </body>
+</html>
